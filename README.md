@@ -33,13 +33,17 @@ After a successful build, the WASM artifact lives at `target/wasm32-unknown-unkn
 
 ### Deploy to Testnet
 
-1. Deploy using the Soroban CLI and note the returned contract ID (the 32-byte hex string in the response).
+1. Deploy using the Soroban CLI and note the returned contract ID (the 32-byte hex string in the response). Use a funded Testnet source account (e.g., one managed by Freighter or Friendbot) so the master key can sign the deployment.
 
    ```bash
-   soroban contract deploy \ 
-     --wasm target/wasm32-unknown-unknown/release/contract.wasm \ 
+   cd contract
+   soroban contract deploy \
+     --wasm target/wasm32-unknown-unknown/release/contract.wasm \
+     --source-account G...FUNDED... \
      --network testnet
    ```
+
+   The command assumes you are already inside `contract/`, no constructor arguments are required, and it prints the deployed contract ID on success. Copy that ID for the frontend env.
 
 2. Keep that contract ID handy; the frontend reads it from `VITE_SOROBAN_CONTRACT_ID`.
 
@@ -85,6 +89,10 @@ npm run build
 2. Deploy the WASM to Testnet (`soroban contract deploy …`).
 3. Update `vite-project/.env.local` with the contract ID.
 4. Run `npm run dev` and connect via Freighter to invoke `set_last_payment` or view the stored payment.
+5. Confirm the deployment by fetching the contract metadata or invoking a read-only method:
+   - `soroban contract info --id <CONTRACT_ID> --network testnet`
+   - `soroban contract call --id <CONTRACT_ID> --fn last_payment --network testnet`
+   Alternatively, open the Vite frontend and hit “Refresh contract state” once the wallet is connected; if the UI reads `last_payment`, the contract is responding.
 
 ## Testing & verification
 
@@ -96,3 +104,18 @@ npm run build
 - The frontend talks directly to Horizon/Soroban RPC and the Freighter extension; there is no intermediate server.
 - All sensitive payloads (transaction XDRs) are signed by Freighter before being submitted to the Soroban RPC.
 - Keep your Testnet account funded via Friendbot before sending transactions.
+
+
+--network testnet
+ℹ️  Simulating install transaction…
+ℹ️  Signing transaction: 1ef983a7cd8d082a479f9cf2a3a39907f8002829d93811ee47578a612868e418
+🌎 Submitting install transaction…
+ℹ️  Using wasm hash c6c47f013f1d38d9d30e2a333e05916512d51ddb66bda693bc54c64757b781ad
+ℹ️  Simulating deploy transaction…
+ℹ️  Transaction hash is 9d59c41e83501989630da96d24621f174ccf752fcdfa94a0fdd8821606368a8b
+🔗 https://stellar.expert/explorer/testnet/tx/9d59c41e83501989630da96d24621f174ccf752fcdfa94a0fdd8821606368a8b
+ℹ️  Signing transaction: 9d59c41e83501989630da96d24621f174ccf752fcdfa94a0fdd8821606368a8b
+🌎 Submitting deploy transaction…
+🔗 https://stellar.expert/explorer/testnet/contract/CA2CPSF57SRXTKGSS2ZBR2FQ2X64O5VMJF6JRFT4PAAN5EDPVYLPX4XN
+✅ Deployed!
+CA2CPSF57SRXTKGSS2ZBR2FQ2X64O5VMJF6JRFT4PAAN5EDPVYLPX4XN

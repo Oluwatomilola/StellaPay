@@ -1,13 +1,14 @@
 [package]
 name = "contract"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-soroban-sdk = { version = "23.5.2", features = ["hazmat-address", "testutils"] }
+soroban-sdk = { version = "23.5.2", default-features = false }
 
 [dev-dependencies]
-stellar-strkey = "0.0.16"
+soroban-sdk = { version = "23.5.2", features = ["testutils"] }
+stellar-strkey = "0.0.8"
