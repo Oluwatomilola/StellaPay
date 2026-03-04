@@ -1,26 +1,10 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "ES2023",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "types": ["node"],
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
+    "module": "Node16",
+    "moduleResolution": "Bundler",
+    "target": "ES2020",
+    "isolatedModules": true,
     "noEmit": true,
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
-  },
-  "include": ["vite.config.ts"]
+    "types": ["vite/client"]
+  }
 }

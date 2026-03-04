@@ -1,0 +1,2882 @@
+   0.661501875s  INFO prepare_target{force=false package_id=contract v0.1.0 (/Users/macbook/dev/StellaPay/contract) target="contract"}: cargo::core::compiler::fingerprint: fingerprint error for contract v0.1.0 (/Users/macbook/dev/StellaPay/contract)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("contract", ["cdylib"], "/Users/macbook/dev/StellaPay/contract/src/lib.rs", Edition2024) }
+   0.662587542s  INFO prepare_target{force=false package_id=contract v0.1.0 (/Users/macbook/dev/StellaPay/contract) target="contract"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/contract-08c7b1b2c6e66f00/lib-contract`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.702235917s  INFO prepare_target{force=false package_id=soroban-sdk v23.5.2 target="soroban_sdk"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-sdk v23.5.2/Check { test: false }/TargetInner { doctest: false, ..: lib_target("soroban_sdk", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/soroban-sdk-23.5.2/src/lib.rs", Edition2021) }
+   0.702272083s  INFO prepare_target{force=false package_id=soroban-sdk v23.5.2 target="soroban_sdk"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/soroban-sdk-18dfa22d1f3966da/lib-soroban_sdk`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: std::rt::lang_start_internal
+  17: _main
+   0.704411458s  INFO prepare_target{force=false package_id=arbitrary v1.3.2 target="arbitrary"}: cargo::core::compiler::fingerprint: fingerprint error for arbitrary v1.3.2/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("arbitrary", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/arbitrary-1.3.2/src/lib.rs", Edition2021) }
+   0.704435458s  INFO prepare_target{force=false package_id=arbitrary v1.3.2 target="arbitrary"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/arbitrary-b87a971f601ff241/lib-arbitrary`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.713384375s  INFO prepare_target{force=false package_id=ctor v0.5.0 target="ctor"}: cargo::core::compiler::fingerprint: fingerprint error for ctor v0.5.0/Check { test: false }/TargetInner { ..: lib_target("ctor", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ctor-0.5.0/src/lib.rs", Edition2021) }
+   0.713412542s  INFO prepare_target{force=false package_id=ctor v0.5.0 target="ctor"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ctor-8b6be82f8b4bc777/lib-ctor`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.714346750s  INFO prepare_target{force=false package_id=dtor v0.1.1 target="dtor"}: cargo::core::compiler::fingerprint: fingerprint error for dtor v0.1.1/Check { test: false }/TargetInner { ..: lib_target("dtor", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/dtor-0.1.1/src/lib.rs", Edition2021) }
+   0.714362250s  INFO prepare_target{force=false package_id=dtor v0.1.1 target="dtor"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/dtor-bde8eba6a0f0864f/lib-dtor`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.715146750s  INFO prepare_target{force=false package_id=ed25519-dalek v2.2.0 target="ed25519_dalek"}: cargo::core::compiler::fingerprint: fingerprint error for ed25519-dalek v2.2.0/Check { test: false }/TargetInner { ..: lib_target("ed25519_dalek", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ed25519-dalek-2.2.0/src/lib.rs", Edition2021) }
+   0.715164500s  INFO prepare_target{force=false package_id=ed25519-dalek v2.2.0 target="ed25519_dalek"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ed25519-dalek-fd688198bc7e4663/lib-ed25519_dalek`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.716113542s  INFO prepare_target{force=false package_id=curve25519-dalek v4.1.3 target="curve25519_dalek"}: cargo::core::compiler::fingerprint: fingerprint error for curve25519-dalek v4.1.3/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("curve25519_dalek", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/curve25519-dalek-4.1.3/src/lib.rs", Edition2021) }
+   0.716128667s  INFO prepare_target{force=false package_id=curve25519-dalek v4.1.3 target="curve25519_dalek"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/curve25519-dalek-5fb0ad634618dc2b/lib-curve25519_dalek`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.716879708s  INFO prepare_target{force=false package_id=cfg-if v1.0.4 target="cfg_if"}: cargo::core::compiler::fingerprint: fingerprint error for cfg-if v1.0.4/Check { test: false }/TargetInner { ..: lib_target("cfg_if", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cfg-if-1.0.4/src/lib.rs", Edition2018) }
+   0.716891792s  INFO prepare_target{force=false package_id=cfg-if v1.0.4 target="cfg_if"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/cfg-if-7228978f4fcb9234/lib-cfg_if`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.718893292s  INFO prepare_target{force=false package_id=digest v0.10.7 target="digest"}: cargo::core::compiler::fingerprint: fingerprint error for digest v0.10.7/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("digest", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/digest-0.10.7/src/lib.rs", Edition2018) }
+   0.718914792s  INFO prepare_target{force=false package_id=digest v0.10.7 target="digest"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/digest-f4fe700084ed5eed/lib-digest`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.719714333s  INFO prepare_target{force=false package_id=block-buffer v0.10.4 target="block_buffer"}: cargo::core::compiler::fingerprint: fingerprint error for block-buffer v0.10.4/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("block_buffer", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/block-buffer-0.10.4/src/lib.rs", Edition2018) }
+   0.719728875s  INFO prepare_target{force=false package_id=block-buffer v0.10.4 target="block_buffer"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/block-buffer-dd92c26bb7b37478/lib-block_buffer`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.720265917s  INFO prepare_target{force=false package_id=generic-array v0.14.9 target="generic_array"}: cargo::core::compiler::fingerprint: fingerprint error for generic-array v0.14.9/Check { test: false }/TargetInner { ..: lib_target("generic_array", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/generic-array-0.14.9/src/lib.rs", Edition2015) }
+   0.720279167s  INFO prepare_target{force=false package_id=generic-array v0.14.9 target="generic_array"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/generic-array-93fc91833a12a571/lib-generic_array`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.721586750s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="typenum"}: cargo::core::compiler::fingerprint: fingerprint error for typenum v1.19.0/Check { test: false }/TargetInner { ..: lib_target("typenum", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/typenum-1.19.0/src/lib.rs", Edition2018) }
+   0.721601250s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="typenum"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/typenum-1e66d7cf02bc5a08/lib-typenum`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: cargo::core::compiler::compile
+  13: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  14: cargo::ops::cargo_compile::compile_ws
+  15: cargo::ops::cargo_compile::compile_with_exec
+  16: cargo::ops::cargo_compile::compile
+  17: cargo::commands::check::exec
+  18: <cargo::cli::Exec>::exec
+  19: cargo::main
+  20: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  21: std::rt::lang_start::<()>::{closure#0}
+  22: std::rt::lang_start_internal
+  23: _main
+   0.722645208s  INFO prepare_target{force=false package_id=zeroize v1.8.2 target="zeroize"}: cargo::core::compiler::fingerprint: fingerprint error for zeroize v1.8.2/Check { test: false }/TargetInner { ..: lib_target("zeroize", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zeroize-1.8.2/src/lib.rs", Edition2021) }
+   0.722659833s  INFO prepare_target{force=false package_id=zeroize v1.8.2 target="zeroize"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/zeroize-584579e1857d56d0/lib-zeroize`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: cargo::core::compiler::compile
+  13: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  14: cargo::ops::cargo_compile::compile_ws
+  15: cargo::ops::cargo_compile::compile_with_exec
+  16: cargo::ops::cargo_compile::compile
+  17: cargo::commands::check::exec
+  18: <cargo::cli::Exec>::exec
+  19: cargo::main
+  20: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  21: std::rt::lang_start::<()>::{closure#0}
+  22: std::rt::lang_start_internal
+  23: _main
+   0.723470458s  INFO prepare_target{force=false package_id=const-oid v0.9.6 target="const_oid"}: cargo::core::compiler::fingerprint: fingerprint error for const-oid v0.9.6/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("const_oid", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.9.6/src/lib.rs", Edition2021) }
+   0.723483625s  INFO prepare_target{force=false package_id=const-oid v0.9.6 target="const_oid"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/const-oid-c4ade6a49cae461d/lib-const_oid`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.723934042s  INFO prepare_target{force=false package_id=crypto-common v0.1.6 target="crypto_common"}: cargo::core::compiler::fingerprint: fingerprint error for crypto-common v0.1.6/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("crypto_common", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crypto-common-0.1.6/src/lib.rs", Edition2018) }
+   0.723946667s  INFO prepare_target{force=false package_id=crypto-common v0.1.6 target="crypto_common"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/crypto-common-69c2540521938f85/lib-crypto_common`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.724514500s  INFO prepare_target{force=false package_id=subtle v2.6.1 target="subtle"}: cargo::core::compiler::fingerprint: fingerprint error for subtle v2.6.1/Check { test: false }/TargetInner { ..: lib_target("subtle", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs", Edition2018) }
+   0.724528792s  INFO prepare_target{force=false package_id=subtle v2.6.1 target="subtle"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/subtle-db0f2c0122691469/lib-subtle`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.724937208s  INFO prepare_target{force=false package_id=ed25519 v2.2.3 target="ed25519"}: cargo::core::compiler::fingerprint: fingerprint error for ed25519 v2.2.3/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("ed25519", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ed25519-2.2.3/src/lib.rs", Edition2021) }
+   0.724948625s  INFO prepare_target{force=false package_id=ed25519 v2.2.3 target="ed25519"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ed25519-58a1085344368901/lib-ed25519`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.725543708s  INFO prepare_target{force=false package_id=signature v2.2.0 target="signature"}: cargo::core::compiler::fingerprint: fingerprint error for signature v2.2.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("signature", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/signature-2.2.0/src/lib.rs", Edition2021) }
+   0.725555708s  INFO prepare_target{force=false package_id=signature v2.2.0 target="signature"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/signature-1c1ed52644a1b90b/lib-signature`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.726149833s  INFO prepare_target{force=false package_id=rand_core v0.6.4 target="rand_core"}: cargo::core::compiler::fingerprint: fingerprint error for rand_core v0.6.4/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("rand_core", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.6.4/src/lib.rs", Edition2018) }
+   0.726163042s  INFO prepare_target{force=false package_id=rand_core v0.6.4 target="rand_core"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/rand_core-8b07e7d216c3bb89/lib-rand_core`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.726666167s  INFO prepare_target{force=false package_id=getrandom v0.2.17 target="getrandom"}: cargo::core::compiler::fingerprint: fingerprint error for getrandom v0.2.17/Check { test: false }/TargetInner { ..: lib_target("getrandom", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.2.17/src/lib.rs", Edition2018) }
+   0.726677417s  INFO prepare_target{force=false package_id=getrandom v0.2.17 target="getrandom"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/getrandom-c194b469e162cbd6/lib-getrandom`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.727253583s  INFO prepare_target{force=false package_id=libc v0.2.182 target="libc"}: cargo::core::compiler::fingerprint: fingerprint error for libc v0.2.182/Check { test: false }/TargetInner { ..: lib_target("libc", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libc-0.2.182/src/lib.rs", Edition2021) }
+   0.727264000s  INFO prepare_target{force=false package_id=libc v0.2.182 target="libc"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/libc-c7c02a62c30bc5d3/lib-libc`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: cargo::core::compiler::compile
+  13: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  14: cargo::ops::cargo_compile::compile_ws
+  15: cargo::ops::cargo_compile::compile_with_exec
+  16: cargo::ops::cargo_compile::compile
+  17: cargo::commands::check::exec
+  18: <cargo::cli::Exec>::exec
+  19: cargo::main
+  20: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  21: std::rt::lang_start::<()>::{closure#0}
+  22: std::rt::lang_start_internal
+  23: _main
+   0.728283458s  INFO prepare_target{force=false package_id=sha2 v0.10.9 target="sha2"}: cargo::core::compiler::fingerprint: fingerprint error for sha2 v0.10.9/Check { test: false }/TargetInner { ..: lib_target("sha2", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sha2-0.10.9/src/lib.rs", Edition2018) }
+   0.728294375s  INFO prepare_target{force=false package_id=sha2 v0.10.9 target="sha2"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/sha2-adfa2f8181423c88/lib-sha2`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.728947125s  INFO prepare_target{force=false package_id=cpufeatures v0.2.17 target="cpufeatures"}: cargo::core::compiler::fingerprint: fingerprint error for cpufeatures v0.2.17/Check { test: false }/TargetInner { ..: lib_target("cpufeatures", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cpufeatures-0.2.17/src/lib.rs", Edition2018) }
+   0.728958167s  INFO prepare_target{force=false package_id=cpufeatures v0.2.17 target="cpufeatures"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/cpufeatures-2500e193c1df3469/lib-cpufeatures`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.729628833s  INFO prepare_target{force=false package_id=rand v0.8.5 target="rand"}: cargo::core::compiler::fingerprint: fingerprint error for rand v0.8.5/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("rand", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand-0.8.5/src/lib.rs", Edition2018) }
+   0.729655833s  INFO prepare_target{force=false package_id=rand v0.8.5 target="rand"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/rand-655e04f3d4dad988/lib-rand`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.730428917s  INFO prepare_target{force=false package_id=rand_chacha v0.3.1 target="rand_chacha"}: cargo::core::compiler::fingerprint: fingerprint error for rand_chacha v0.3.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("rand_chacha", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_chacha-0.3.1/src/lib.rs", Edition2018) }
+   0.730444625s  INFO prepare_target{force=false package_id=rand_chacha v0.3.1 target="rand_chacha"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/rand_chacha-e33492d8ac75f2b0/lib-rand_chacha`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.731000833s  INFO prepare_target{force=false package_id=ppv-lite86 v0.2.21 target="ppv_lite86"}: cargo::core::compiler::fingerprint: fingerprint error for ppv-lite86 v0.2.21/Check { test: false }/TargetInner { ..: lib_target("ppv_lite86", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ppv-lite86-0.2.21/src/lib.rs", Edition2021) }
+   0.731012708s  INFO prepare_target{force=false package_id=ppv-lite86 v0.2.21 target="ppv_lite86"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ppv-lite86-9f3a3bb66216631b/lib-ppv_lite86`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.731477375s  INFO prepare_target{force=false package_id=zerocopy v0.8.40 target="zerocopy"}: cargo::core::compiler::fingerprint: fingerprint error for zerocopy v0.8.40/Check { test: false }/TargetInner { ..: lib_target("zerocopy", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerocopy-0.8.40/src/lib.rs", Edition2021) }
+   0.731487917s  INFO prepare_target{force=false package_id=zerocopy v0.8.40 target="zerocopy"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/zerocopy-a6ceeb1fb8968485/lib-zerocopy`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.732619375s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint: fingerprint error for serde v1.0.228/Check { test: false }/TargetInner { ..: lib_target("serde", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs", Edition2021) }
+   0.732633625s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/serde-569788a41ec9e00c/lib-serde`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.733810042s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="serde_core"}: cargo::core::compiler::fingerprint: fingerprint error for serde_core v1.0.228/Check { test: false }/TargetInner { ..: lib_target("serde_core", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.228/src/lib.rs", Edition2021) }
+   0.733821333s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="serde_core"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/serde_core-604a09e3b94bb82d/lib-serde_core`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.735027083s  INFO prepare_target{force=false package_id=serde_json v1.0.149 target="serde_json"}: cargo::core::compiler::fingerprint: fingerprint error for serde_json v1.0.149/Check { test: false }/TargetInner { ..: lib_target("serde_json", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.149/src/lib.rs", Edition2021) }
+   0.735040708s  INFO prepare_target{force=false package_id=serde_json v1.0.149 target="serde_json"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/serde_json-0d82fe1c90813fe8/lib-serde_json`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.735706750s  INFO prepare_target{force=false package_id=itoa v1.0.17 target="itoa"}: cargo::core::compiler::fingerprint: fingerprint error for itoa v1.0.17/Check { test: false }/TargetInner { ..: lib_target("itoa", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/itoa-1.0.17/src/lib.rs", Edition2021) }
+   0.735717375s  INFO prepare_target{force=false package_id=itoa v1.0.17 target="itoa"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/itoa-470c3536ec7ad19b/lib-itoa`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.736119833s  INFO prepare_target{force=false package_id=memchr v2.8.0 target="memchr"}: cargo::core::compiler::fingerprint: fingerprint error for memchr v2.8.0/Check { test: false }/TargetInner { benched: false, ..: lib_target("memchr", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.0/src/lib.rs", Edition2021) }
+   0.736131250s  INFO prepare_target{force=false package_id=memchr v2.8.0 target="memchr"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/memchr-27aa143b1a2d0528/lib-memchr`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.737223542s  INFO prepare_target{force=false package_id=zmij v1.0.21 target="zmij"}: cargo::core::compiler::fingerprint: fingerprint error for zmij v1.0.21/Check { test: false }/TargetInner { ..: lib_target("zmij", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zmij-1.0.21/src/lib.rs", Edition2021) }
+   0.737243458s  INFO prepare_target{force=false package_id=zmij v1.0.21 target="zmij"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/zmij-ce9db1b21d01c2e2/lib-zmij`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.738303250s  INFO prepare_target{force=false package_id=soroban-env-host v23.0.1 target="soroban_env_host"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-env-host v23.0.1/Check { test: false }/TargetInner { ..: lib_target("soroban_env_host", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/soroban-env-host-23.0.1/src/lib.rs", Edition2021) }
+   0.738318292s  INFO prepare_target{force=false package_id=soroban-env-host v23.0.1 target="soroban_env_host"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/soroban-env-host-81ab049de86ff57e/lib-soroban_env_host`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.741005500s  INFO prepare_target{force=false package_id=ark-bls12-381 v0.4.0 target="ark_bls12_381"}: cargo::core::compiler::fingerprint: fingerprint error for ark-bls12-381 v0.4.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("ark_bls12_381", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ark-bls12-381-0.4.0/src/lib.rs", Edition2021) }
+   0.741030542s  INFO prepare_target{force=false package_id=ark-bls12-381 v0.4.0 target="ark_bls12_381"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ark-bls12-381-f981668d8b36c488/lib-ark_bls12_381`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.741830667s  INFO prepare_target{force=false package_id=ark-ec v0.4.2 target="ark_ec"}: cargo::core::compiler::fingerprint: fingerprint error for ark-ec v0.4.2/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("ark_ec", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ark-ec-0.4.2/src/lib.rs", Edition2021) }
+   0.741846333s  INFO prepare_target{force=false package_id=ark-ec v0.4.2 target="ark_ec"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ark-ec-c157f0c06b30316e/lib-ark_ec`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.742891333s  INFO prepare_target{force=false package_id=ark-ff v0.4.2 target="ark_ff"}: cargo::core::compiler::fingerprint: fingerprint error for ark-ff v0.4.2/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("ark_ff", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ark-ff-0.4.2/src/lib.rs", Edition2021) }
+   0.742908792s  INFO prepare_target{force=false package_id=ark-ff v0.4.2 target="ark_ff"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ark-ff-d7a99fa05a013771/lib-ark_ff`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.745668167s  INFO prepare_target{force=false package_id=ark-serialize v0.4.2 target="ark_serialize"}: cargo::core::compiler::fingerprint: fingerprint error for ark-serialize v0.4.2/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("ark_serialize", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ark-serialize-0.4.2/src/lib.rs", Edition2021) }
+   0.745702583s  INFO prepare_target{force=false package_id=ark-serialize v0.4.2 target="ark_serialize"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ark-serialize-106516dbf788b9d5/lib-ark_serialize`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.746962958s  INFO prepare_target{force=false package_id=ark-std v0.4.0 target="ark_std"}: cargo::core::compiler::fingerprint: fingerprint error for ark-std v0.4.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("ark_std", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ark-std-0.4.0/src/lib.rs", Edition2021) }
+   0.746983792s  INFO prepare_target{force=false package_id=ark-std v0.4.0 target="ark_std"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ark-std-850919d58d80e2e9/lib-ark_std`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: cargo::core::compiler::compile
+  13: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  14: cargo::ops::cargo_compile::compile_ws
+  15: cargo::ops::cargo_compile::compile_with_exec
+  16: cargo::ops::cargo_compile::compile
+  17: cargo::commands::check::exec
+  18: <cargo::cli::Exec>::exec
+  19: cargo::main
+  20: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  21: std::rt::lang_start::<()>::{closure#0}
+  22: std::rt::lang_start_internal
+  23: _main
+   0.747664708s  INFO prepare_target{force=false package_id=num-traits v0.2.19 target="num_traits"}: cargo::core::compiler::fingerprint: fingerprint error for num-traits v0.2.19/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("num_traits", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-traits-0.2.19/src/lib.rs", Edition2021) }
+   0.747678083s  INFO prepare_target{force=false package_id=num-traits v0.2.19 target="num_traits"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/num-traits-285e0e962b720dfe/lib-num_traits`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: cargo::core::compiler::compile
+  13: cargo::core::compiler::compile
+  14: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  15: cargo::ops::cargo_compile::compile_ws
+  16: cargo::ops::cargo_compile::compile_with_exec
+  17: cargo::ops::cargo_compile::compile
+  18: cargo::commands::check::exec
+  19: <cargo::cli::Exec>::exec
+  20: cargo::main
+  21: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  22: std::rt::lang_start::<()>::{closure#0}
+  23: std::rt::lang_start_internal
+  24: _main
+   0.748781792s  INFO prepare_target{force=false package_id=num-bigint v0.4.6 target="num_bigint"}: cargo::core::compiler::fingerprint: fingerprint error for num-bigint v0.4.6/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("num_bigint", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-bigint-0.4.6/src/lib.rs", Edition2021) }
+   0.748795333s  INFO prepare_target{force=false package_id=num-bigint v0.4.6 target="num_bigint"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/num-bigint-4072e7eb4c71b9b2/lib-num_bigint`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: cargo::core::compiler::compile
+  13: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  14: cargo::ops::cargo_compile::compile_ws
+  15: cargo::ops::cargo_compile::compile_with_exec
+  16: cargo::ops::cargo_compile::compile
+  17: cargo::commands::check::exec
+  18: <cargo::cli::Exec>::exec
+  19: cargo::main
+  20: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  21: std::rt::lang_start::<()>::{closure#0}
+  22: std::rt::lang_start_internal
+  23: _main
+   0.749404458s  INFO prepare_target{force=false package_id=num-integer v0.1.46 target="num_integer"}: cargo::core::compiler::fingerprint: fingerprint error for num-integer v0.1.46/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("num_integer", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-integer-0.1.46/src/lib.rs", Edition2018) }
+   0.749419208s  INFO prepare_target{force=false package_id=num-integer v0.1.46 target="num_integer"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/num-integer-2d17511ce183f617/lib-num_integer`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: cargo::core::compiler::compile
+  13: cargo::core::compiler::compile
+  14: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  15: cargo::ops::cargo_compile::compile_ws
+  16: cargo::ops::cargo_compile::compile_with_exec
+  17: cargo::ops::cargo_compile::compile
+  18: cargo::commands::check::exec
+  19: <cargo::cli::Exec>::exec
+  20: cargo::main
+  21: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  22: std::rt::lang_start::<()>::{closure#0}
+  23: std::rt::lang_start_internal
+  24: _main
+   0.750234500s  INFO prepare_target{force=false package_id=itertools v0.10.5 target="itertools"}: cargo::core::compiler::fingerprint: fingerprint error for itertools v0.10.5/Check { test: false }/TargetInner { name_inferred: true, tested: false, benched: false, ..: lib_target("itertools", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/itertools-0.10.5/src/lib.rs", Edition2018) }
+   0.750253083s  INFO prepare_target{force=false package_id=itertools v0.10.5 target="itertools"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/itertools-78d14a0f8a8827e7/lib-itertools`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.751376708s  INFO prepare_target{force=false package_id=either v1.15.0 target="either"}: cargo::core::compiler::fingerprint: fingerprint error for either v1.15.0/Check { test: false }/TargetInner { ..: lib_target("either", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/either-1.15.0/src/lib.rs", Edition2021) }
+   0.751400708s  INFO prepare_target{force=false package_id=either v1.15.0 target="either"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/either-dc5b44e9fda9e965/lib-either`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: cargo::core::compiler::compile
+  13: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  14: cargo::ops::cargo_compile::compile_ws
+  15: cargo::ops::cargo_compile::compile_with_exec
+  16: cargo::ops::cargo_compile::compile
+  17: cargo::commands::check::exec
+  18: <cargo::cli::Exec>::exec
+  19: cargo::main
+  20: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  21: std::rt::lang_start::<()>::{closure#0}
+  22: std::rt::lang_start_internal
+  23: _main
+   0.753285042s  INFO prepare_target{force=false package_id=ark-poly v0.4.2 target="ark_poly"}: cargo::core::compiler::fingerprint: fingerprint error for ark-poly v0.4.2/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("ark_poly", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ark-poly-0.4.2/src/lib.rs", Edition2021) }
+   0.753304083s  INFO prepare_target{force=false package_id=ark-poly v0.4.2 target="ark_poly"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ark-poly-ea95fb98fd53e596/lib-ark_poly`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.754239125s  INFO prepare_target{force=false package_id=hashbrown v0.13.2 target="hashbrown"}: cargo::core::compiler::fingerprint: fingerprint error for hashbrown v0.13.2/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("hashbrown", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hashbrown-0.13.2/src/lib.rs", Edition2021) }
+   0.754254208s  INFO prepare_target{force=false package_id=hashbrown v0.13.2 target="hashbrown"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/hashbrown-f88371a41f49aee6/lib-hashbrown`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.754779042s  INFO prepare_target{force=false package_id=ahash v0.8.12 target="ahash"}: cargo::core::compiler::fingerprint: fingerprint error for ahash v0.8.12/Check { test: false }/TargetInner { ..: lib_target("ahash", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ahash-0.8.12/src/lib.rs", Edition2018) }
+   0.754792708s  INFO prepare_target{force=false package_id=ahash v0.8.12 target="ahash"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ahash-77db5f0da5d07b0f/lib-ahash`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: cargo::core::compiler::compile
+  13: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  14: cargo::ops::cargo_compile::compile_ws
+  15: cargo::ops::cargo_compile::compile_with_exec
+  16: cargo::ops::cargo_compile::compile
+  17: cargo::commands::check::exec
+  18: <cargo::cli::Exec>::exec
+  19: cargo::main
+  20: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  21: std::rt::lang_start::<()>::{closure#0}
+  22: std::rt::lang_start_internal
+  23: _main
+   0.756190375s  INFO prepare_target{force=false package_id=once_cell v1.21.3 target="once_cell"}: cargo::core::compiler::fingerprint: fingerprint error for once_cell v1.21.3/Check { test: false }/TargetInner { ..: lib_target("once_cell", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/once_cell-1.21.3/src/lib.rs", Edition2021) }
+   0.756210708s  INFO prepare_target{force=false package_id=once_cell v1.21.3 target="once_cell"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/once_cell-0ae3558a35ebe87e/lib-once_cell`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: cargo::core::compiler::compile
+  13: cargo::core::compiler::compile
+  14: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  15: cargo::ops::cargo_compile::compile_ws
+  16: cargo::ops::cargo_compile::compile_with_exec
+  17: cargo::ops::cargo_compile::compile
+  18: cargo::commands::check::exec
+  19: <cargo::cli::Exec>::exec
+  20: cargo::main
+  21: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  22: std::rt::lang_start::<()>::{closure#0}
+  23: std::rt::lang_start_internal
+  24: _main
+   0.756721000s  INFO prepare_target{force=false package_id=ecdsa v0.16.9 target="ecdsa"}: cargo::core::compiler::fingerprint: fingerprint error for ecdsa v0.16.9/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("ecdsa", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ecdsa-0.16.9/src/lib.rs", Edition2021) }
+   0.756735792s  INFO prepare_target{force=false package_id=ecdsa v0.16.9 target="ecdsa"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ecdsa-036e20e4773edcbe/lib-ecdsa`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.757575458s  INFO prepare_target{force=false package_id=der v0.7.10 target="der"}: cargo::core::compiler::fingerprint: fingerprint error for der v0.7.10/Check { test: false }/TargetInner { ..: lib_target("der", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/der-0.7.10/src/lib.rs", Edition2021) }
+   0.757589083s  INFO prepare_target{force=false package_id=der v0.7.10 target="der"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/der-b1c2d17e9de687a1/lib-der`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.758168958s  INFO prepare_target{force=false package_id=elliptic-curve v0.13.8 target="elliptic_curve"}: cargo::core::compiler::fingerprint: fingerprint error for elliptic-curve v0.13.8/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("elliptic_curve", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/elliptic-curve-0.13.8/src/lib.rs", Edition2021) }
+   0.758181542s  INFO prepare_target{force=false package_id=elliptic-curve v0.13.8 target="elliptic_curve"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/elliptic-curve-edc18b7cd045cd65/lib-elliptic_curve`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.759324750s  INFO prepare_target{force=false package_id=base16ct v0.2.0 target="base16ct"}: cargo::core::compiler::fingerprint: fingerprint error for base16ct v0.2.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("base16ct", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/lib.rs", Edition2021) }
+   0.759338250s  INFO prepare_target{force=false package_id=base16ct v0.2.0 target="base16ct"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/base16ct-62dc7e0808bc2ab7/lib-base16ct`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.759759833s  INFO prepare_target{force=false package_id=crypto-bigint v0.5.5 target="crypto_bigint"}: cargo::core::compiler::fingerprint: fingerprint error for crypto-bigint v0.5.5/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("crypto_bigint", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crypto-bigint-0.5.5/src/lib.rs", Edition2021) }
+   0.759773333s  INFO prepare_target{force=false package_id=crypto-bigint v0.5.5 target="crypto_bigint"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/crypto-bigint-65cb27f7799e6276/lib-crypto_bigint`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.760495958s  INFO prepare_target{force=false package_id=ff v0.13.1 target="ff"}: cargo::core::compiler::fingerprint: fingerprint error for ff v0.13.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("ff", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ff-0.13.1/src/lib.rs", Edition2021) }
+   0.760509375s  INFO prepare_target{force=false package_id=ff v0.13.1 target="ff"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ff-05b297f22e1b25ce/lib-ff`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.761080208s  INFO prepare_target{force=false package_id=group v0.13.0 target="group"}: cargo::core::compiler::fingerprint: fingerprint error for group v0.13.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("group", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/group-0.13.0/src/lib.rs", Edition2021) }
+   0.761093250s  INFO prepare_target{force=false package_id=group v0.13.0 target="group"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/group-75e2c637639aa96a/lib-group`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.761749000s  INFO prepare_target{force=false package_id=sec1 v0.7.3 target="sec1"}: cargo::core::compiler::fingerprint: fingerprint error for sec1 v0.7.3/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("sec1", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/lib.rs", Edition2021) }
+   0.761761875s  INFO prepare_target{force=false package_id=sec1 v0.7.3 target="sec1"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/sec1-239bb152f6a80cf3/lib-sec1`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.762560875s  INFO prepare_target{force=false package_id=rfc6979 v0.4.0 target="rfc6979"}: cargo::core::compiler::fingerprint: fingerprint error for rfc6979 v0.4.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("rfc6979", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rfc6979-0.4.0/src/lib.rs", Edition2021) }
+   0.762573875s  INFO prepare_target{force=false package_id=rfc6979 v0.4.0 target="rfc6979"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/rfc6979-9f016478ec6cadf6/lib-rfc6979`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.763146708s  INFO prepare_target{force=false package_id=hmac v0.12.1 target="hmac"}: cargo::core::compiler::fingerprint: fingerprint error for hmac v0.12.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("hmac", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hmac-0.12.1/src/lib.rs", Edition2018) }
+   0.763159750s  INFO prepare_target{force=false package_id=hmac v0.12.1 target="hmac"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/hmac-08c518df2baae8b0/lib-hmac`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.763810125s  INFO prepare_target{force=false package_id=hex-literal v0.4.1 target="hex_literal"}: cargo::core::compiler::fingerprint: fingerprint error for hex-literal v0.4.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("hex_literal", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hex-literal-0.4.1/src/lib.rs", Edition2021) }
+   0.763823542s  INFO prepare_target{force=false package_id=hex-literal v0.4.1 target="hex_literal"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/hex-literal-b9d9f7818c060e04/lib-hex_literal`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.764265625s  INFO prepare_target{force=false package_id=k256 v0.13.4 target="k256"}: cargo::core::compiler::fingerprint: fingerprint error for k256 v0.13.4/Check { test: false }/TargetInner { ..: lib_target("k256", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/k256-0.13.4/src/lib.rs", Edition2021) }
+   0.764278125s  INFO prepare_target{force=false package_id=k256 v0.13.4 target="k256"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/k256-531ce7396dc78d69/lib-k256`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.765390958s  INFO prepare_target{force=false package_id=p256 v0.13.2 target="p256"}: cargo::core::compiler::fingerprint: fingerprint error for p256 v0.13.2/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("p256", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/p256-0.13.2/src/lib.rs", Edition2021) }
+   0.765409042s  INFO prepare_target{force=false package_id=p256 v0.13.2 target="p256"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/p256-2aef11a8f5f548d0/lib-p256`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.766244125s  INFO prepare_target{force=false package_id=primeorder v0.13.6 target="primeorder"}: cargo::core::compiler::fingerprint: fingerprint error for primeorder v0.13.6/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("primeorder", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/primeorder-0.13.6/src/lib.rs", Edition2021) }
+   0.766259000s  INFO prepare_target{force=false package_id=primeorder v0.13.6 target="primeorder"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/primeorder-e8f6b6b8ec8205eb/lib-primeorder`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.766810167s  INFO prepare_target{force=false package_id=sha3 v0.10.8 target="sha3"}: cargo::core::compiler::fingerprint: fingerprint error for sha3 v0.10.8/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("sha3", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sha3-0.10.8/src/lib.rs", Edition2018) }
+   0.766824292s  INFO prepare_target{force=false package_id=sha3 v0.10.8 target="sha3"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/sha3-d1b45990c2ce0234/lib-sha3`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.767412792s  INFO prepare_target{force=false package_id=keccak v0.1.6 target="keccak"}: cargo::core::compiler::fingerprint: fingerprint error for keccak v0.1.6/Check { test: false }/TargetInner { ..: lib_target("keccak", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/keccak-0.1.6/src/lib.rs", Edition2018) }
+   0.767426667s  INFO prepare_target{force=false package_id=keccak v0.1.6 target="keccak"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/keccak-1386ac42dd0e9e2a/lib-keccak`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.768530208s  INFO prepare_target{force=false package_id=soroban-env-common v23.0.1 target="soroban_env_common"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-env-common v23.0.1/Check { test: false }/TargetInner { ..: lib_target("soroban_env_common", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/soroban-env-common-23.0.1/src/lib.rs", Edition2021) }
+   0.768544500s  INFO prepare_target{force=false package_id=soroban-env-common v23.0.1 target="soroban_env_common"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/soroban-env-common-6852c2b3b5903571/lib-soroban_env_common`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.769860833s  INFO prepare_target{force=false package_id=ethnum v1.5.2 target="ethnum"}: cargo::core::compiler::fingerprint: fingerprint error for ethnum v1.5.2/Check { test: false }/TargetInner { ..: lib_target("ethnum", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ethnum-1.5.2/src/lib.rs", Edition2021) }
+   0.769873958s  INFO prepare_target{force=false package_id=ethnum v1.5.2 target="ethnum"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/ethnum-5decaa31cdba7012/lib-ethnum`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.787145250s  INFO prepare_target{force=false package_id=soroban-wasmi v0.31.1-soroban.20.0.1 target="soroban_wasmi"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-wasmi v0.31.1-soroban.20.0.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("soroban_wasmi", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/soroban-wasmi-0.31.1-soroban.20.0.1/src/lib.rs", Edition2021) }
+   0.787176583s  INFO prepare_target{force=false package_id=soroban-wasmi v0.31.1-soroban.20.0.1 target="soroban_wasmi"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/soroban-wasmi-b49f916157d4faf9/lib-soroban_wasmi`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.788033500s  INFO prepare_target{force=false package_id=smallvec v1.15.1 target="smallvec"}: cargo::core::compiler::fingerprint: fingerprint error for smallvec v1.15.1/Check { test: false }/TargetInner { ..: lib_target("smallvec", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/smallvec-1.15.1/src/lib.rs", Edition2018) }
+   0.788046208s  INFO prepare_target{force=false package_id=smallvec v1.15.1 target="smallvec"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/smallvec-c7b797d1117a9f8f/lib-smallvec`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.788476708s  INFO prepare_target{force=false package_id=spin v0.9.8 target="spin"}: cargo::core::compiler::fingerprint: fingerprint error for spin v0.9.8/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("spin", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.9.8/src/lib.rs", Edition2015) }
+   0.788490167s  INFO prepare_target{force=false package_id=spin v0.9.8 target="spin"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/spin-f100a4a3c646ba7f/lib-spin`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.789246458s  INFO prepare_target{force=false package_id=wasmi_arena v0.4.1 target="wasmi_arena"}: cargo::core::compiler::fingerprint: fingerprint error for wasmi_arena v0.4.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("wasmi_arena", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasmi_arena-0.4.1/src/lib.rs", Edition2021) }
+   0.789268375s  INFO prepare_target{force=false package_id=wasmi_arena v0.4.1 target="wasmi_arena"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/wasmi_arena-df54b0c7f2160baa/lib-wasmi_arena`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.789840250s  INFO prepare_target{force=false package_id=wasmi_core v0.13.0 target="wasmi_core"}: cargo::core::compiler::fingerprint: fingerprint error for wasmi_core v0.13.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("wasmi_core", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasmi_core-0.13.0/src/lib.rs", Edition2021) }
+   0.789860667s  INFO prepare_target{force=false package_id=wasmi_core v0.13.0 target="wasmi_core"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/wasmi_core-4a133da5611539ae/lib-wasmi_core`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.790625833s  INFO prepare_target{force=false package_id=downcast-rs v1.2.1 target="downcast_rs"}: cargo::core::compiler::fingerprint: fingerprint error for downcast-rs v1.2.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("downcast_rs", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/downcast-rs-1.2.1/src/lib.rs", Edition2015) }
+   0.790645292s  INFO prepare_target{force=false package_id=downcast-rs v1.2.1 target="downcast_rs"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/downcast-rs-8c508cdab3c16fdb/lib-downcast_rs`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.791144042s  INFO prepare_target{force=false package_id=libm v0.2.16 target="libm"}: cargo::core::compiler::fingerprint: fingerprint error for libm v0.2.16/Check { test: false }/TargetInner { ..: lib_target("libm", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libm-0.2.16/src/lib.rs", Edition2021) }
+   0.791166917s  INFO prepare_target{force=false package_id=libm v0.2.16 target="libm"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/libm-5a46d4a916686723/lib-libm`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.793310250s  INFO prepare_target{force=false package_id=wasmparser-nostd v0.100.2 target="wasmparser_nostd"}: cargo::core::compiler::fingerprint: fingerprint error for wasmparser-nostd v0.100.2/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("wasmparser_nostd", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasmparser-nostd-0.100.2/src/lib.rs", Edition2021) }
+   0.793329000s  INFO prepare_target{force=false package_id=wasmparser-nostd v0.100.2 target="wasmparser_nostd"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/wasmparser-nostd-969ec15799f82224/lib-wasmparser_nostd`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.793869208s  INFO prepare_target{force=false package_id=indexmap-nostd v0.4.0 target="indexmap_nostd"}: cargo::core::compiler::fingerprint: fingerprint error for indexmap-nostd v0.4.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("indexmap_nostd", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/indexmap-nostd-0.4.0/src/lib.rs", Edition2021) }
+   0.793884500s  INFO prepare_target{force=false package_id=indexmap-nostd v0.4.0 target="indexmap_nostd"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/indexmap-nostd-5aea63fbf2120b45/lib-indexmap_nostd`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.794338208s  INFO prepare_target{force=false package_id=static_assertions v1.1.0 target="static_assertions"}: cargo::core::compiler::fingerprint: fingerprint error for static_assertions v1.1.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("static_assertions", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/static_assertions-1.1.0/src/lib.rs", Edition2015) }
+   0.794352792s  INFO prepare_target{force=false package_id=static_assertions v1.1.0 target="static_assertions"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/static_assertions-1ea5fd42fe2ed06a/lib-static_assertions`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.794761042s  INFO prepare_target{force=false package_id=stellar-xdr v23.0.0 target="stellar_xdr"}: cargo::core::compiler::fingerprint: fingerprint error for stellar-xdr v23.0.0/Check { test: false }/TargetInner { ..: lib_target("stellar_xdr", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-xdr-23.0.0/src/lib.rs", Edition2021) }
+   0.794774042s  INFO prepare_target{force=false package_id=stellar-xdr v23.0.0 target="stellar_xdr"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/stellar-xdr-23064f4929da909b/lib-stellar_xdr`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.795996333s  INFO prepare_target{force=false package_id=base64 v0.22.1 target="base64"}: cargo::core::compiler::fingerprint: fingerprint error for base64 v0.22.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("base64", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base64-0.22.1/src/lib.rs", Edition2018) }
+   0.796010125s  INFO prepare_target{force=false package_id=base64 v0.22.1 target="base64"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/base64-ccb9d3fae9326ecd/lib-base64`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.796565375s  INFO prepare_target{force=false package_id=escape-bytes v0.1.1 target="escape_bytes"}: cargo::core::compiler::fingerprint: fingerprint error for escape-bytes v0.1.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("escape_bytes", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/escape-bytes-0.1.1/src/lib.rs", Edition2021) }
+   0.796583958s  INFO prepare_target{force=false package_id=escape-bytes v0.1.1 target="escape_bytes"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/escape-bytes-0793e7d5e248663a/lib-escape_bytes`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.797025542s  INFO prepare_target{force=false package_id=hex v0.4.3 target="hex"}: cargo::core::compiler::fingerprint: fingerprint error for hex v0.4.3/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("hex", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hex-0.4.3/src/lib.rs", Edition2018) }
+   0.797040833s  INFO prepare_target{force=false package_id=hex v0.4.3 target="hex"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/hex-c3c004f734ef3557/lib-hex`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.797586542s  INFO prepare_target{force=false package_id=serde_with v3.17.0 target="serde_with"}: cargo::core::compiler::fingerprint: fingerprint error for serde_with v3.17.0/Check { test: false }/TargetInner { ..: lib_target("serde_with", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_with-3.17.0/src/lib.rs", Edition2021) }
+   0.797601000s  INFO prepare_target{force=false package_id=serde_with v3.17.0 target="serde_with"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/serde_with-7dc43a1abaa6956e/lib-serde_with`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.798437750s  INFO prepare_target{force=false package_id=schemars v0.8.22 target="schemars"}: cargo::core::compiler::fingerprint: fingerprint error for schemars v0.8.22/Check { test: false }/TargetInner { ..: lib_target("schemars", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/schemars-0.8.22/src/lib.rs", Edition2021) }
+   0.798451583s  INFO prepare_target{force=false package_id=schemars v0.8.22 target="schemars"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/schemars-912e6f190164cb13/lib-schemars`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.799225625s  INFO prepare_target{force=false package_id=dyn-clone v1.0.20 target="dyn_clone"}: cargo::core::compiler::fingerprint: fingerprint error for dyn-clone v1.0.20/Check { test: false }/TargetInner { ..: lib_target("dyn_clone", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/dyn-clone-1.0.20/src/lib.rs", Edition2018) }
+   0.799239333s  INFO prepare_target{force=false package_id=dyn-clone v1.0.20 target="dyn_clone"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/dyn-clone-c5d3b70274fe90de/lib-dyn_clone`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: cargo::core::compiler::compile
+  13: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  14: cargo::ops::cargo_compile::compile_ws
+  15: cargo::ops::cargo_compile::compile_with_exec
+  16: cargo::ops::cargo_compile::compile
+  17: cargo::commands::check::exec
+  18: <cargo::cli::Exec>::exec
+  19: cargo::main
+  20: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  21: std::rt::lang_start::<()>::{closure#0}
+  22: std::rt::lang_start_internal
+  23: _main
+   0.799680208s  INFO prepare_target{force=false package_id=stellar-strkey v0.0.13 target="stellar_strkey"}: cargo::core::compiler::fingerprint: fingerprint error for stellar-strkey v0.0.13/Check { test: false }/TargetInner { ..: lib_target("stellar_strkey", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.13/src/lib.rs", Edition2021) }
+   0.799691708s  INFO prepare_target{force=false package_id=stellar-strkey v0.0.13 target="stellar_strkey"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/stellar-strkey-e8505c0d158fa597/lib-stellar_strkey`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.800221500s  INFO prepare_target{force=false package_id=data-encoding v2.10.0 target="data_encoding"}: cargo::core::compiler::fingerprint: fingerprint error for data-encoding v2.10.0/Check { test: false }/TargetInner { ..: lib_target("data_encoding", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/data-encoding-2.10.0/src/lib.rs", Edition2018) }
+   0.800232875s  INFO prepare_target{force=false package_id=data-encoding v2.10.0 target="data_encoding"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/data-encoding-ead4f18bf7965f2f/lib-data_encoding`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.801312292s  INFO prepare_target{force=false package_id=wasmparser v0.116.1 target="wasmparser"}: cargo::core::compiler::fingerprint: fingerprint error for wasmparser v0.116.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("wasmparser", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasmparser-0.116.1/src/lib.rs", Edition2021) }
+   0.801327042s  INFO prepare_target{force=false package_id=wasmparser v0.116.1 target="wasmparser"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/wasmparser-cca4f01ab10a9548/lib-wasmparser`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.801881000s  INFO prepare_target{force=false package_id=indexmap v2.13.0 target="indexmap"}: cargo::core::compiler::fingerprint: fingerprint error for indexmap v2.13.0/Check { test: false }/TargetInner { benched: false, ..: lib_target("indexmap", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/indexmap-2.13.0/src/lib.rs", Edition2021) }
+   0.801894625s  INFO prepare_target{force=false package_id=indexmap v2.13.0 target="indexmap"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/indexmap-731e5fd289465b9e/lib-indexmap`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.802462708s  INFO prepare_target{force=false package_id=equivalent v1.0.2 target="equivalent"}: cargo::core::compiler::fingerprint: fingerprint error for equivalent v1.0.2/Check { test: false }/TargetInner { ..: lib_target("equivalent", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/equivalent-1.0.2/src/lib.rs", Edition2015) }
+   0.802476792s  INFO prepare_target{force=false package_id=equivalent v1.0.2 target="equivalent"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/equivalent-0716044aa765588b/lib-equivalent`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.802889000s  INFO prepare_target{force=false package_id=hashbrown v0.16.1 target="hashbrown"}: cargo::core::compiler::fingerprint: fingerprint error for hashbrown v0.16.1/Check { test: false }/TargetInner { ..: lib_target("hashbrown", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hashbrown-0.16.1/src/lib.rs", Edition2021) }
+   0.802902417s  INFO prepare_target{force=false package_id=hashbrown v0.16.1 target="hashbrown"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/hashbrown-85e33829135e7350/lib-hashbrown`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: cargo::core::compiler::compile
+  12: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  13: cargo::ops::cargo_compile::compile_ws
+  14: cargo::ops::cargo_compile::compile_with_exec
+  15: cargo::ops::cargo_compile::compile
+  16: cargo::commands::check::exec
+  17: <cargo::cli::Exec>::exec
+  18: cargo::main
+  19: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  20: std::rt::lang_start::<()>::{closure#0}
+  21: std::rt::lang_start_internal
+  22: _main
+   0.803339500s  INFO prepare_target{force=false package_id=semver v1.0.27 target="semver"}: cargo::core::compiler::fingerprint: fingerprint error for semver v1.0.27/Check { test: false }/TargetInner { ..: lib_target("semver", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/semver-1.0.27/src/lib.rs", Edition2018) }
+   0.803352917s  INFO prepare_target{force=false package_id=semver v1.0.27 target="semver"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/semver-dfdd90840fd00baa/lib-semver`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.804414000s  INFO prepare_target{force=false package_id=soroban-ledger-snapshot v23.5.2 target="soroban_ledger_snapshot"}: cargo::core::compiler::fingerprint: fingerprint error for soroban-ledger-snapshot v23.5.2/Check { test: false }/TargetInner { ..: lib_target("soroban_ledger_snapshot", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/soroban-ledger-snapshot-23.5.2/src/lib.rs", Edition2021) }
+   0.804427792s  INFO prepare_target{force=false package_id=soroban-ledger-snapshot v23.5.2 target="soroban_ledger_snapshot"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/soroban-ledger-snapshot-b1381c484eb530e0/lib-soroban_ledger_snapshot`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.805684375s  INFO prepare_target{force=false package_id=thiserror v1.0.69 target="thiserror"}: cargo::core::compiler::fingerprint: fingerprint error for thiserror v1.0.69/Check { test: false }/TargetInner { ..: lib_target("thiserror", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-1.0.69/src/lib.rs", Edition2021) }
+   0.805697250s  INFO prepare_target{force=false package_id=thiserror v1.0.69 target="thiserror"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/thiserror-1c4220888172c7b2/lib-thiserror`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.813597417s  INFO prepare_target{force=false package_id=stellar-strkey v0.0.16 target="stellar_strkey"}: cargo::core::compiler::fingerprint: fingerprint error for stellar-strkey v0.0.16/Check { test: false }/TargetInner { ..: lib_target("stellar_strkey", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.16/src/lib.rs", Edition2021) }
+   0.813622875s  INFO prepare_target{force=false package_id=stellar-strkey v0.0.16 target="stellar_strkey"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/stellar-strkey-0d3d341ba3eb2249/lib-stellar_strkey`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   9: cargo::ops::cargo_compile::compile_ws
+  10: cargo::ops::cargo_compile::compile_with_exec
+  11: cargo::ops::cargo_compile::compile
+  12: cargo::commands::check::exec
+  13: <cargo::cli::Exec>::exec
+  14: cargo::main
+  15: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  16: std::rt::lang_start::<()>::{closure#0}
+  17: std::rt::lang_start_internal
+  18: _main
+   0.814350792s  INFO prepare_target{force=false package_id=heapless v0.8.0 target="heapless"}: cargo::core::compiler::fingerprint: fingerprint error for heapless v0.8.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("heapless", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/heapless-0.8.0/src/lib.rs", Edition2021) }
+   0.814364083s  INFO prepare_target{force=false package_id=heapless v0.8.0 target="heapless"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/heapless-94896859c9892ffc/lib-heapless`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  10: cargo::ops::cargo_compile::compile_ws
+  11: cargo::ops::cargo_compile::compile_with_exec
+  12: cargo::ops::cargo_compile::compile
+  13: cargo::commands::check::exec
+  14: <cargo::cli::Exec>::exec
+  15: cargo::main
+  16: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  17: std::rt::lang_start::<()>::{closure#0}
+  18: std::rt::lang_start_internal
+  19: _main
+   0.814938583s  INFO prepare_target{force=false package_id=hash32 v0.3.1 target="hash32"}: cargo::core::compiler::fingerprint: fingerprint error for hash32 v0.3.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("hash32", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hash32-0.3.1/src/lib.rs", Edition2015) }
+   0.814950167s  INFO prepare_target{force=false package_id=hash32 v0.3.1 target="hash32"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/hash32-e84e43a0f5c61339/lib-hash32`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.815421042s  INFO prepare_target{force=false package_id=byteorder v1.5.0 target="byteorder"}: cargo::core::compiler::fingerprint: fingerprint error for byteorder v1.5.0/Check { test: false }/TargetInner { benched: false, ..: lib_target("byteorder", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/byteorder-1.5.0/src/lib.rs", Edition2021) }
+   0.815435500s  INFO prepare_target{force=false package_id=byteorder v1.5.0 target="byteorder"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/byteorder-db286844b3a233f7/lib-byteorder`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: cargo::core::compiler::compile
+  11: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  12: cargo::ops::cargo_compile::compile_ws
+  13: cargo::ops::cargo_compile::compile_with_exec
+  14: cargo::ops::cargo_compile::compile
+  15: cargo::commands::check::exec
+  16: <cargo::cli::Exec>::exec
+  17: cargo::main
+  18: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  19: std::rt::lang_start::<()>::{closure#0}
+  20: std::rt::lang_start_internal
+  21: _main
+   0.816538167s  INFO prepare_target{force=false package_id=stable_deref_trait v1.2.1 target="stable_deref_trait"}: cargo::core::compiler::fingerprint: fingerprint error for stable_deref_trait v1.2.1/Check { test: false }/TargetInner { ..: lib_target("stable_deref_trait", ["lib"], "/Users/macbook/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stable_deref_trait-1.2.1/src/lib.rs", Edition2015) }
+   0.816558625s  INFO prepare_target{force=false package_id=stable_deref_trait v1.2.1 target="stable_deref_trait"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/stable_deref_trait-80e318edb62c0e9c/lib-stable_deref_trait`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: cargo::core::compiler::compile
+   8: cargo::core::compiler::compile
+   9: cargo::core::compiler::compile
+  10: <cargo::core::compiler::build_runner::BuildRunner>::compile
+  11: cargo::ops::cargo_compile::compile_ws
+  12: cargo::ops::cargo_compile::compile_with_exec
+  13: cargo::ops::cargo_compile::compile
+  14: cargo::commands::check::exec
+  15: <cargo::cli::Exec>::exec
+  16: cargo::main
+  17: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  18: std::rt::lang_start::<()>::{closure#0}
+  19: std::rt::lang_start_internal
+  20: _main
+   0.817960500s  INFO prepare_target{force=false package_id=contract v0.1.0 (/Users/macbook/dev/StellaPay/contract) target="contract"}: cargo::core::compiler::fingerprint: fingerprint error for contract v0.1.0 (/Users/macbook/dev/StellaPay/contract)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("contract", ["cdylib"], "/Users/macbook/dev/StellaPay/contract/src/lib.rs", Edition2024) }
+   0.817978250s  INFO prepare_target{force=false package_id=contract v0.1.0 (/Users/macbook/dev/StellaPay/contract) target="contract"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/macbook/dev/StellaPay/contract/./target_local/debug/.fingerprint/contract-97f2e7b7e69a2383/test-lib-contract`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+    Checking libc v0.2.182
+    Checking cfg-if v1.0.4
+    Checking typenum v1.19.0
+    Checking subtle v2.6.1
+    Checking const-oid v0.9.6
+    Checking zeroize v1.8.2
+    Checking num-traits v0.2.19
+    Checking zerocopy v0.8.40
+    Checking serde_core v1.0.228
+    Checking base16ct v0.2.0
+    Checking der v0.7.10
+    Checking zmij v1.0.21
+    Checking itoa v1.0.17
+    Checking memchr v2.8.0
+    Checking either v1.15.0
+    Checking once_cell v1.21.3
+    Checking getrandom v0.2.17
+    Checking cpufeatures v0.2.17
+    Checking generic-array v0.14.9
+    Checking itertools v0.10.5
+    Checking data-encoding v2.10.0
+    Checking rand_core v0.6.4
+    Checking num-integer v0.1.46
+    Checking ff v0.13.1
+    Checking dyn-clone v1.0.20
+    Checking libm v0.2.16
+    Checking group v0.13.0
+    Checking indexmap-nostd v0.4.0
+    Checking downcast-rs v1.2.1
+    Checking num-bigint v0.4.6
+    Checking hashbrown v0.16.1
+    Checking equivalent v1.0.2
+    Checking wasmparser-nostd v0.100.2
+    Checking crypto-common v0.1.6
+    Checking block-buffer v0.10.4
+    Checking digest v0.10.7
+    Checking sec1 v0.7.3
+    Checking crypto-bigint v0.5.5
+    Checking indexmap v2.13.0
+    Checking sha2 v0.10.9
+    Checking signature v2.2.0
+    Checking hmac v0.12.1
+    Checking wasmi_core v0.13.0
+    Checking rfc6979 v0.4.0
+    Checking arbitrary v1.3.2
+    Checking stellar-strkey v0.0.13
+    Checking semver v1.0.27
+    Checking escape-bytes v0.1.1
+    Checking wasmi_arena v0.4.1
+    Checking ethnum v1.5.2
+    Checking smallvec v1.15.1
+    Checking spin v0.9.8
+    Checking serde v1.0.228
+    Checking serde_json v1.0.149
+    Checking base64 v0.22.1
+    Checking wasmparser v0.116.1
+    Checking curve25519-dalek v4.1.3
+    Checking elliptic-curve v0.13.8
+    Checking ed25519 v2.2.3
+    Checking hex v0.4.3
+    Checking keccak v0.1.6
+    Checking static_assertions v1.1.0
+    Checking byteorder v1.5.0
+    Checking sha3 v0.10.8
+    Checking ecdsa v0.16.9
+    Checking primeorder v0.13.6
+    Checking schemars v0.8.22
+    Checking hash32 v0.3.1
+    Checking ed25519-dalek v2.2.0
+    Checking stable_deref_trait v1.2.1
+    Checking hex-literal v0.4.1
+    Checking heapless v0.8.0
+    Checking dtor v0.1.1
+    Checking thiserror v1.0.69
+    Checking k256 v0.13.4
+    Checking p256 v0.13.2
+    Checking ctor v0.5.0
+    Checking stellar-strkey v0.0.16
+    Checking soroban-wasmi v0.31.1-soroban.20.0.1
+    Checking serde_with v3.17.0
+    Checking ppv-lite86 v0.2.21
+    Checking ahash v0.8.12
+    Checking hashbrown v0.13.2
+    Checking rand_chacha v0.3.1
+    Checking rand v0.8.5
+    Checking ark-std v0.4.0
+    Checking ark-serialize v0.4.2
+    Checking ark-ff v0.4.2
+    Checking stellar-xdr v23.0.0
+    Checking ark-poly v0.4.2
+    Checking ark-ec v0.4.2
+    Checking ark-bls12-381 v0.4.0
+    Checking soroban-env-common v23.0.1
+    Checking soroban-env-host v23.0.1
+    Checking soroban-ledger-snapshot v23.5.2
+    Checking soroban-sdk v23.5.2
+    Checking contract v0.1.0 (/Users/macbook/dev/StellaPay/contract)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 39.01s
