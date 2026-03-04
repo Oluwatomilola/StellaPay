@@ -1,76 +1,98 @@
 # Stellar Simple Payment dApp
 
-A beginner-friendly Stellar Soroban project that pairs a Rust contract with a React + Vite frontend.
+This project combines a minimal Soroban contract with a React + Vite frontend so you can store the most recent payment details on-chain and then read or update that value through a browser UI backed by Freighter.
 
-## What you get
+## Project layout
 
-- **Soroban contract** (`contract/`) that stores the latest payment (destination, amount, memo) and emits a `payment:set` event.
-- **React + TypeScript frontend** (`vite-project/`) that connects to Freighter, fetches the XLM balance, and submits Soroban transactions against the deployed contract.
+- `contract/` contains the Rust Soroban contract plus unit tests.
+- `vite-project/` is the React + TypeScript frontend that connects to Freighter, displays the XLM balance, and submits `set_last_payment` invocations.
 
 ## Prerequisites
 
-- Node.js 18+ for the frontend.
-- Rust toolchain + `cargo` for the contract + Soroban CLI (`cargo install --locked soroban-cli`).
-- Freighter browser extension configured for the Testnet network.
+1. **Rust toolchain + Soroban CLI** – install via `rustup default nightly` and then `cargo install soroban-cli --locked`. The project relies on `cargo +nightly` for testing.
+2. **Node.js 18+** – for the Vite frontend.
+3. **Freighter browser extension** configured to the Testnet network and funded via Friendbot.
+4. **Soroban contract ID** – you will deploy the contract and paste the resulting ID (32-byte hex) into the frontend environment.
 
-## Smart contract workflow
+## Smart contract
 
-1. Install the Soroban CLI (if not already installed):
-   ```bash
-   cargo install --locked soroban-cli
-   ```
-2. Run the unit tests to ensure the contract compiles:
-   ```bash
-   cd contract
-   cargo +nightly test
-   ```
-3. Build the WASM artifact for deployment:
-   ```bash
-   soroban contract build
-   ```
-4. Deploy to Horizon Testnet and note the returned contract ID:
-   ```bash
-   soroban contract deploy --wasm target/wasm32-unknown-unknown/release/simple_payment.wasm --network testnet
-   ```
-5. Copy the `contract id` from the deployment response and keep it for the frontend.
+The contract exposes two entry points:
 
-> ⚠️ This environment cannot talk to Testnet, so the deployment must be run locally. Use the steps above and paste the resulting contract id into your frontend `.env`.
+- `set_last_payment(address, amount, memo)` – stores (destination, amount, memo) inside persistent storage and emits a typed `PaymentSetEvent` so tools can decode the new data.
+- `last_payment()` – reads the last stored payment (same structure) so the frontend can display it.
 
-## Frontend setup
+### Build & test
 
-1. Install dependencies and link the workspace:
+```bash
+cd contract
+cargo +nightly test
+soroban contract build
+```
+
+After a successful build, the WASM artifact lives at `target/wasm32-unknown-unknown/release/contract.wasm`.
+
+### Deploy to Testnet
+
+1. Deploy using the Soroban CLI and note the returned contract ID (the 32-byte hex string in the response).
+
    ```bash
-   cd vite-project
-   npm install
+   soroban contract deploy \ 
+     --wasm target/wasm32-unknown-unknown/release/contract.wasm \ 
+     --network testnet
    ```
-2. Create a `.env.local` (or `.env`) file containing:
-   ```text
-   VITE_SOROBAN_CONTRACT_ID=<paste-contract-id-here>
-   ```
-3. Launch the dev server with Freighter open:
-   ```bash
-   npm run dev
-   ```
-4. The app lets you:
 
-   - Connect/disconnect your Freighter wallet.
-   - View your native XLM balance.
-   - Enter a destination account, amount (converted to stroops), and optional memo.
-   - Build a Soroban `set_last_payment` invocation and submit it through Freighter.
-   - Surface success/error feedback plus a link to Stellar Expert for the transaction.
+2. Keep that contract ID handy; the frontend reads it from `VITE_SOROBAN_CONTRACT_ID`.
 
-5. For production builds:
-   ```bash
-   npm run build
-   ```
+## Frontend (Vite + React)
+
+The frontend lets you:
+
+- Connect a Freighter wallet and display the native XLM balance.
+- Enter a destination, amount, and memo, then dispatch the `set_last_payment` invocation signed by Freighter.
+- Refresh and render the data returned by the contract’s `last_payment` getter.
+
+### Setup
+
+```bash
+cd vite-project
+npm install
+cp .env.example .env.local # or create your own
+```
+
+Add your deployed contract ID to the `.env.local`:
+
+```text
+VITE_SOROBAN_CONTRACT_ID=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+```
+
+### Dev server
+
+```bash
+npm run dev
+```
+
+Open the served URL with Freighter enabled (typically `http://localhost:5173`).
+
+### Production build
+
+```bash
+npm run build
+```
+
+## Deployment checklist
+
+1. Build the contract (`soroban contract build`).
+2. Deploy the WASM to Testnet (`soroban contract deploy …`).
+3. Update `vite-project/.env.local` with the contract ID.
+4. Run `npm run dev` and connect via Freighter to invoke `set_last_payment` or view the stored payment.
 
 ## Testing & verification
 
-- Contract: `cd contract && cargo +nightly test`.
+- Soroban contract: `cd contract && cargo +nightly test`.
 - Frontend: `cd vite-project && npm run build`.
 
 ## Notes
 
-- The contract uses `symbol!` keys so that the frontend can always read the last stored payment.
-- The frontend relies on `@stellar/stellar-sdk` for Soroban tooling and `@stellar/freighter-api` to request signatures from the extension.
-- Keep your testnet Freighter wallet funded via Friendbot before attempting transactions.
+- The frontend talks directly to Horizon/Soroban RPC and the Freighter extension; there is no intermediate server.
+- All sensitive payloads (transaction XDRs) are signed by Freighter before being submitted to the Soroban RPC.
+- Keep your Testnet account funded via Friendbot before sending transactions.

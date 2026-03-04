@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "Node16",
+    "moduleResolution": "Bundler",
+    "target": "ES2020",
+    "isolatedModules": true,
+    "noEmit": true,
+    "types": ["vite/client"]
+  }
+}

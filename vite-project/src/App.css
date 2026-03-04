@@ -1,0 +1,118 @@
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #0b1220;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #060a12;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  margin-bottom: 0.3rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.status {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: #a3b4ff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.grid p {
+  margin: 0;
+  color: #8890a3;
+}
+
+.grid strong {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+button.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+button:not(.secondary) {
+  background: linear-gradient(135deg, #6c6cf2, #1f85ff);
+  color: #fff;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+label {
+  font-size: 0.85rem;
+  color: #a0adc5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+input {
+  border-radius: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.65rem 0.85rem;
+  color: #fff;
+}
+
+.payment {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: #c5cee0;
+}
