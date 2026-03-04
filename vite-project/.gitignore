@@ -1,3 +1,9 @@
 node_modules
 dist
 *.log
+.cargo.lock
+target_local
+target_release
+target_debug
+target
+*.rs.bk
