@@ -5,7 +5,7 @@ This project combines a minimal Soroban contract with a React + Vite frontend so
 ## Project layout
 
 - `contract/` contains the Rust Soroban contract plus unit tests.
-- `vite-project/` is the React + TypeScript frontend that connects to Freighter, displays the XLM balance, and submits `set_last_payment` invocations.
+- `vite-project/` is the React + JavaScript frontend that connects to Freighter, displays the XLM balance, and submits `set_last_payment` invocations.
 
 ## Prerequisites
 
