@@ -1,124 +1,75 @@
-import { useState } from "react";
-import {
-  getAddress,
-  signTransaction,
-  isConnected
-} from "@stellar/freighter-api";
-import {
-  SorobanRpc,
-  TransactionBuilder,
-  Networks,
-  BASE_FEE,
-  xdr,
-  Address,
-  Contract,
-  nativeToScVal
-} from "@stellar/stellar-sdk";
-
-const contractId =
-  "CA2CPSF57SRXTKGSS2ZBR2FQ2X64O5VMJF6JRFT4PAAN5EDPVYLPX4XN";
-
-const server = new SorobanRpc.Server(
-  "https://soroban-testnet.stellar.org"
-);
+import React from 'react';
+import './App.css';
+import { WalletConnect } from './components/WalletConnect.jsx';
+import { SetPaymentForm } from './components/SetPaymentForm.jsx';
+import { GetPaymentDisplay } from './components/GetPaymentDisplay.jsx';
+import { Card, CardHeader, CardBody } from './components/Card.jsx';
 
 function App() {
-  const [publicKey, setPublicKey] = useState("");
-  const [balance, setBalance] = useState("");
-  const [lastPayment, setLastPayment] = useState("");
+  const handlePaymentSuccess = (result) => {
+    console.log('Payment set successfully:', result);
+  };
 
-  async function connectWallet() {
-    const connected = await isConnected();
-    if (!connected) {
-      alert("Connect Freighter first");
-      return;
-    }
-
-    const address = await getAddress();
-    setPublicKey(address);
-
-    const account = await server.getAccount(address);
-    const bal = account.balances.find(b => b.asset_type === "native");
-    setBalance(bal.balance);
-  }
-
-  async function setPayment() {
-    const account = await server.getAccount(publicKey);
-    const contract = new Contract(contractId);
-
-    const tx = new TransactionBuilder(account, {
-      fee: BASE_FEE,
-      networkPassphrase: Networks.TESTNET
-    })
-      .addOperation(
-        contract.call(
-          "set_last_payment",
-          nativeToScVal(100)
-        )
-      )
-      .setTimeout(30)
-      .build();
-
-    const simulated = await server.simulateTransaction(tx);
-    tx.addFootprint(simulated.result.footprint);
-
-    const signed = await signTransaction(tx.toXDR(), {
-      network: "TESTNET"
-    });
-
-    const signedTx = TransactionBuilder.fromXDR(
-      signed,
-      Networks.TESTNET
-    );
-
-    const result = await server.sendTransaction(signedTx);
-
-    alert("Transaction Sent: " + result.hash);
-  }
-
-  async function getPayment() {
-    const contract = new Contract(contractId);
-
-    const account = await server.getAccount(publicKey);
-
-    const tx = new TransactionBuilder(account, {
-      fee: BASE_FEE,
-      networkPassphrase: Networks.TESTNET
-    })
-      .addOperation(contract.call("last_payment"))
-      .setTimeout(30)
-      .build();
-
-    const simulated = await server.simulateTransaction(tx);
-
-    const value = simulated.result.retval;
-    const decoded = value._value.toString();
-
-    setLastPayment(decoded);
-  }
+  const handlePaymentRetrieved = (payment) => {
+    console.log('Payment retrieved:', payment);
+  };
 
   return (
-    <div style={{ padding: 40 }}>
-      <h1>StellaPay</h1>
+    <div className="min-h-screen bg-stellar-gray py-8 px-4">
+      <div className="max-w-2xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-stellar-blue mb-2">💰 StellaPay</h1>
+          <p className="text-gray-600">A complete mini-dApp for Stellar payments</p>
+          <p className="text-xs text-gray-500 mt-2">Built with React, Vite, and Soroban</p>
+        </div>
 
-      <button onClick={connectWallet}>
-        Connect Wallet
-      </button>
+        {/* Wallet Connection */}
+        <WalletConnect />
 
-      <p>Public Key: {publicKey}</p>
-      <p>Balance: {balance} XLM</p>
+        {/* Main Content - Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Set Payment */}
+          <div>
+            <SetPaymentForm onSuccess={handlePaymentSuccess} />
+          </div>
 
-      <hr />
+          {/* Get Payment */}
+          <div>
+            <GetPaymentDisplay onPaymentRetrieved={handlePaymentRetrieved} />
+          </div>
+        </div>
 
-      <button onClick={setPayment}>
-        Send Test Payment (100)
-      </button>
+        {/* Info Section */}
+        <Card className="mt-8">
+          <CardHeader>
+            <h3 className="text-lg font-bold text-stellar-blue">ℹ️ About This dApp</h3>
+          </CardHeader>
+          <CardBody>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li>• <strong>Set Last Payment:</strong> Record a payment transaction to the contract</li>
+              <li>• <strong>Get Last Payment:</strong> Retrieve the most recently recorded payment</li>
+              <li>• <strong>Testnet Only:</strong> This dApp operates on Stellar's testnet</li>
+              <li>• <strong>Requires Freighter:</strong> Install and unlock Freighter wallet to interact</li>
+              <li>• <strong>Open Source:</strong> View code on{' '}
+                <a
+                  href="https://github.com/yourusername/stella-pay"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-stellar-lightblue hover:underline"
+                >
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </CardBody>
+        </Card>
 
-      <button onClick={getPayment}>
-        Get Last Payment
-      </button>
-
-      <p>Last Payment: {lastPayment}</p>
+        {/* Footer */}
+        <div className="text-center mt-8 text-xs text-gray-500">
+          <p>© 2024 StellaPay. Built with ❤️ for the Stellar Community</p>
+        </div>
+      </div>
     </div>
   );
 }
