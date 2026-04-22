@@ -24,7 +24,11 @@
           "contract_data": {
             "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
             "key": {
-              "symbol": "LAST_PAY"
+              "vec": [
+                {
+                  "symbol": "LastPayment"
+                }
+              ]
             },
             "durability": "persistent"
           }
@@ -37,7 +41,11 @@
                 "ext": "v0",
                 "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
                 "key": {
-                  "symbol": "LAST_PAY"
+                  "vec": [
+                    {
+                      "symbol": "LastPayment"
+                    }
+                  ]
                 },
                 "durability": "persistent",
                 "val": {
