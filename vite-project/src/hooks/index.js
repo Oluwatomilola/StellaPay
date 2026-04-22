@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { WalletContext } from '../contexts/WalletContext.jsx';
+export { useContractEvents } from './useContractEvents.js';
 
 /**
  * Hook to use wallet context

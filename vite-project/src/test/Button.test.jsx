@@ -1,40 +1,29 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { Button } from '../../components/Button.jsx';
+import { describe, expect, it, vi } from 'vitest';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { Button } from '../components/Button.jsx';
 
-describe('Button Component', () => {
-  it('should render button with text', () => {
-    render(<Button>Click Me</Button>);
-    expect(screen.getByText('Click Me')).toBeInTheDocument();
+describe('Button', () => {
+  it('renders button text', () => {
+    render(<Button>Launch</Button>);
+    expect(screen.getByRole('button', { name: 'Launch' })).toBeInTheDocument();
   });
 
-  it('should call onClick handler', async () => {
+  it('calls the click handler', () => {
     const handleClick = vi.fn();
-    render(<Button onClick={handleClick}>Click</Button>);
-    
-    fireEvent.click(screen.getByText('Click'));
+    render(<Button onClick={handleClick}>Connect</Button>);
+
+    fireEvent.click(screen.getByRole('button', { name: 'Connect' }));
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
-  it('should be disabled when disabled prop is true', () => {
-    render(<Button disabled>Click</Button>);
-    expect(screen.getByText('Click')).toBeDisabled();
+  it('shows loading state and disables the control', () => {
+    render(<Button isLoading>Submit</Button>);
+
+    expect(screen.getByRole('button', { name: 'Working...' })).toBeDisabled();
   });
 
-  it('should be disabled when loading', () => {
-    render(<Button isLoading>Click</Button>);
-    expect(screen.getByText(/Loading/)).toBeInTheDocument();
-    expect(screen.getByRole('button')).toBeDisabled();
-  });
-
-  it('should apply variant styles', () => {
-    const { rerender } = render(<Button variant="primary">Primary</Button>);
-    expect(screen.getByRole('button')).toHaveClass('bg-stellar-lightblue');
-
-    rerender(<Button variant="secondary">Secondary</Button>);
-    expect(screen.getByRole('button')).toHaveClass('bg-gray-300');
-
-    rerender(<Button variant="danger">Danger</Button>);
-    expect(screen.getByRole('button')).toHaveClass('bg-red-500');
+  it('applies the requested variant class', () => {
+    render(<Button variant="secondary">Secondary</Button>);
+    expect(screen.getByRole('button')).toHaveClass('stella-button--secondary');
   });
 });

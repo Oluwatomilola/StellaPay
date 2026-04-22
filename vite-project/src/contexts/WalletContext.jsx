@@ -1,5 +1,6 @@
-import React, { createContext, useState, useCallback, useEffect } from 'react';
+import React, { createContext, useCallback, useEffect, useState } from 'react';
 import walletService from '../services/walletService.js';
+import monitoringService from '../services/monitoringService.js';
 
 export const WalletContext = createContext();
 
@@ -12,10 +13,9 @@ export const WalletProvider = ({ children }) => {
     error: null,
   });
 
-  // Connect wallet
   const connectWallet = useCallback(async () => {
-    setWalletState(prev => ({
-      ...prev,
+    setWalletState((previous) => ({
+      ...previous,
       isLoading: true,
       error: null,
     }));
@@ -32,21 +32,21 @@ export const WalletProvider = ({ children }) => {
         error: null,
       });
 
-      // Store in localStorage for persistence
       localStorage.setItem('wallet_connected', 'true');
-      localStorage.setItem('wallet_publicKey', publicKey);
+      localStorage.setItem('wallet_public_key', publicKey);
     } catch (error) {
-      const errorMessage = error.message || 'Failed to connect wallet';
-      setWalletState(prev => ({
-        ...prev,
+      const normalized = monitoringService.captureException(error, {
+        context: 'WalletProvider.connectWallet',
+      });
+
+      setWalletState((previous) => ({
+        ...previous,
         isLoading: false,
-        error: errorMessage,
+        error: normalized.message,
       }));
-      console.error('Wallet connection error:', error);
     }
   }, []);
 
-  // Disconnect wallet
   const disconnectWallet = useCallback(() => {
     walletService.disconnect();
     setWalletState({
@@ -57,44 +57,46 @@ export const WalletProvider = ({ children }) => {
       error: null,
     });
     localStorage.removeItem('wallet_connected');
-    localStorage.removeItem('wallet_publicKey');
+    localStorage.removeItem('wallet_public_key');
   }, []);
 
-  // Refresh balance
   const refreshBalance = useCallback(async () => {
-    if (!walletState.isConnected) return;
+    if (!walletState.isConnected) {
+      return;
+    }
 
     try {
       const balanceData = await walletService.getBalance();
-      setWalletState(prev => ({
-        ...prev,
+      setWalletState((previous) => ({
+        ...previous,
         balance: balanceData.native,
         error: null,
       }));
     } catch (error) {
-      console.error('Error refreshing balance:', error);
-      setWalletState(prev => ({
-        ...prev,
-        error: error.message || 'Failed to refresh balance',
+      const normalized = monitoringService.captureException(error, {
+        context: 'WalletProvider.refreshBalance',
+      });
+
+      setWalletState((previous) => ({
+        ...previous,
+        error: normalized.message,
       }));
     }
   }, [walletState.isConnected]);
 
-  // Clear error
   const clearError = useCallback(() => {
-    setWalletState(prev => ({
-      ...prev,
+    setWalletState((previous) => ({
+      ...previous,
       error: null,
     }));
   }, []);
 
-  // Auto-connect on mount if previously connected
   useEffect(() => {
     const wasConnected = localStorage.getItem('wallet_connected') === 'true';
     if (wasConnected) {
       connectWallet();
     }
-  }, []);
+  }, [connectWallet]);
 
   const value = {
     ...walletState,
@@ -104,9 +106,5 @@ export const WalletProvider = ({ children }) => {
     clearError,
   };
 
-  return (
-    <WalletContext.Provider value={value}>
-      {children}
-    </WalletContext.Provider>
-  );
+  return <WalletContext.Provider value={value}>{children}</WalletContext.Provider>;
 };
