@@ -1,7 +1,13 @@
 import * as Freighter from '@stellar/freighter-api';
-import { SorobanRpc, Networks, BASE_FEE } from '@stellar/stellar-sdk';
-import { SOROBAN_SERVER_URL, NETWORK_PASSPHRASE } from '../utils/constants.js';
+import { SorobanRpc } from '@stellar/stellar-sdk';
+import {
+  ERROR_MESSAGES,
+  NETWORK_PASSPHRASE,
+  SIMULATION_ACCOUNT,
+  SOROBAN_SERVER_URL,
+} from '../utils/constants.js';
 import { StellaPayError, handleError } from '../utils/errors.js';
+import monitoringService from './monitoringService.js';
 
 class WalletService {
   constructor() {
@@ -10,126 +16,120 @@ class WalletService {
     this.isInitialized = false;
   }
 
-  /**
-   * Check if Freighter wallet is available
-   */
   async isFreighterAvailable() {
     try {
       return await Freighter.isConnected();
     } catch (error) {
-      console.error('Error checking Freighter availability:', error);
+      monitoringService.captureException(error, { service: 'wallet', action: 'isFreighterAvailable' });
       return false;
     }
   }
 
-  /**
-   * Connect to wallet and retrieve public key
-   */
   async connect() {
     try {
       const isAvailable = await this.isFreighterAvailable();
       if (!isAvailable) {
-        throw new StellaPayError(
-          'Freighter wallet is not available. Please install or unlock Freighter.',
-          'WALLET_NOT_AVAILABLE'
-        );
+        throw new StellaPayError(ERROR_MESSAGES.NO_WALLET, 'WALLET_NOT_AVAILABLE');
       }
 
       const publicKey = await Freighter.getAddress();
       if (!publicKey) {
-        throw new StellaPayError('Failed to retrieve public key', 'NO_PUBLIC_KEY');
+        throw new StellaPayError('Failed to retrieve a Stellar public key.', 'NO_PUBLIC_KEY');
       }
 
       this.publicKey = publicKey;
       this.isInitialized = true;
       return publicKey;
     } catch (error) {
-      throw handleError(error);
+      throw monitoringService.captureException(error, {
+        service: 'wallet',
+        action: 'connect',
+      });
     }
   }
 
-  /**
-   * Get current connected account balance
-   */
   async getBalance() {
     try {
       if (!this.publicKey) {
-        throw new StellaPayError('Wallet not connected', 'WALLET_NOT_CONNECTED');
+        throw new StellaPayError(ERROR_MESSAGES.NO_WALLET, 'WALLET_NOT_CONNECTED');
       }
 
       const account = await this.server.getAccount(this.publicKey);
-      const nativeBalance = account.balances.find(b => b.asset_type === 'native');
-      
+      const nativeBalance = account.balances.find((balance) => balance.asset_type === 'native');
+
       return {
         native: nativeBalance?.balance || '0',
-        account: account,
+        account,
       };
     } catch (error) {
-      throw handleError(error);
+      throw monitoringService.captureException(error, {
+        service: 'wallet',
+        action: 'getBalance',
+      });
     }
   }
 
-  /**
-   * Sign a transaction
-   */
   async signTransaction(tx) {
     try {
       if (!this.publicKey) {
-        throw new StellaPayError('Wallet not connected', 'WALLET_NOT_CONNECTED');
+        throw new StellaPayError(ERROR_MESSAGES.NO_WALLET, 'WALLET_NOT_CONNECTED');
       }
 
-      const signedXDR = await Freighter.signTransaction(tx.toXDR(), {
+      const signedXdr = await Freighter.signTransaction(tx.toXDR(), {
         network: this.getNetworkName(),
       });
 
-      return signedXDR;
+      return signedXdr;
     } catch (error) {
-      if (error.message?.includes('cancelled')) {
-        throw new StellaPayError('Transaction cancelled by user', 'USER_CANCELLED');
-      }
-      throw handleError(error);
+      throw monitoringService.captureException(error, {
+        service: 'wallet',
+        action: 'signTransaction',
+      });
     }
   }
 
-  /**
-   * Get the network name for Freighter
-   */
+  async getReadAccount() {
+    try {
+      const sourceAccount = this.publicKey || SIMULATION_ACCOUNT;
+
+      if (!sourceAccount) {
+        throw new StellaPayError(ERROR_MESSAGES.NO_READ_ACCOUNT, 'NO_READ_ACCOUNT');
+      }
+
+      return await this.server.getAccount(sourceAccount);
+    } catch (error) {
+      throw monitoringService.captureException(handleError(error), {
+        service: 'wallet',
+        action: 'getReadAccount',
+      });
+    }
+  }
+
+  hasReadAccount() {
+    return Boolean(this.publicKey || SIMULATION_ACCOUNT);
+  }
+
   getNetworkName() {
     return NETWORK_PASSPHRASE.includes('Test') ? 'TESTNET' : 'PUBLIC';
   }
 
-  /**
-   * Get the network passphrase
-   */
   getNetworkPassphrase() {
     return NETWORK_PASSPHRASE;
   }
 
-  /**
-   * Disconnect wallet
-   */
   disconnect() {
     this.publicKey = null;
     this.isInitialized = false;
   }
 
-  /**
-   * Get current public key
-   */
   getPublicKey() {
     return this.publicKey;
   }
 
-  /**
-   * Check if wallet is connected
-   */
   isConnected() {
     return this.isInitialized && this.publicKey !== null;
   }
 
-  /**
-   * Get RPC server
-   */
   getServer() {
     return this.server;
   }

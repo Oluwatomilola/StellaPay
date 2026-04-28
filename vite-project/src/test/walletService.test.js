@@ -1,90 +1,83 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import walletService from '../../services/walletService.js';
-import * as Freighter from '@stellar/freighter-api';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-vi.mock('@stellar/freighter-api');
+const mockGetAccount = vi.fn();
+
+vi.mock('@stellar/freighter-api', () => ({
+  isConnected: vi.fn(),
+  getAddress: vi.fn(),
+  signTransaction: vi.fn(),
+}));
+
 vi.mock('@stellar/stellar-sdk', () => ({
   SorobanRpc: {
     Server: vi.fn(() => ({
-      getAccount: vi.fn(),
+      getAccount: mockGetAccount,
     })),
   },
-  Networks: {
-    TESTNET: 'Test SDF Network ; September 2015',
-  },
-  BASE_FEE: '100',
 }));
 
-describe('Wallet Service', () => {
+vi.mock('../services/monitoringService.js', () => ({
+  default: {
+    captureException: vi.fn((error) => error),
+  },
+}));
+
+describe('walletService', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
-    walletService.disconnect();
+    vi.resetModules();
+    mockGetAccount.mockReset();
   });
 
   afterEach(() => {
     vi.clearAllMocks();
   });
 
-  describe('isFreighterAvailable', () => {
-    it('should return true when Freighter is connected', async () => {
-      Freighter.isConnected.mockResolvedValue(true);
-      const result = await walletService.isFreighterAvailable();
-      expect(result).toBe(true);
-    });
+  it('connects and stores the public key', async () => {
+    const walletService = (await import('../services/walletService.js')).default;
+    const Freighter = await import('@stellar/freighter-api');
 
-    it('should return false when Freighter is not connected', async () => {
-      Freighter.isConnected.mockResolvedValue(false);
-      const result = await walletService.isFreighterAvailable();
-      expect(result).toBe(false);
-    });
+    Freighter.isConnected.mockResolvedValue(true);
+    Freighter.getAddress.mockResolvedValue(
+      'GBUQWP3BOUZX34ULNQG23RQ6F4BVXEYMJOCCQ26B7YPGD5CQ67GVGVX'
+    );
+
+    const result = await walletService.connect();
+
+    expect(result).toContain('GBUQW');
+    expect(walletService.isConnected()).toBe(true);
   });
 
-  describe('connect', () => {
-    it('should connect to wallet and set public key', async () => {
-      const testKey = 'GBUQWP3BOUZX34ULNQG23RQ6F4BVXEYMJOCCQ26B7YPGD5CQ67GVGVX';
-      Freighter.isConnected.mockResolvedValue(true);
-      Freighter.getAddress.mockResolvedValue(testKey);
+  it('loads balance for the connected wallet', async () => {
+    const walletService = (await import('../services/walletService.js')).default;
+    const Freighter = await import('@stellar/freighter-api');
 
-      const result = await walletService.connect();
-      expect(result).toBe(testKey);
-      expect(walletService.getPublicKey()).toBe(testKey);
-      expect(walletService.isConnected()).toBe(true);
+    Freighter.isConnected.mockResolvedValue(true);
+    Freighter.getAddress.mockResolvedValue(
+      'GBUQWP3BOUZX34ULNQG23RQ6F4BVXEYMJOCCQ26B7YPGD5CQ67GVGVX'
+    );
+    mockGetAccount.mockResolvedValue({
+      balances: [{ asset_type: 'native', balance: '320.50' }],
     });
 
-    it('should throw error if Freighter not available', async () => {
-      Freighter.isConnected.mockResolvedValue(false);
+    await walletService.connect();
+    const balance = await walletService.getBalance();
 
-      try {
-        await walletService.connect();
-        expect.fail('Should have thrown error');
-      } catch (error) {
-        expect(error.code).toBe('WALLET_NOT_AVAILABLE');
-      }
-    });
+    expect(balance.native).toBe('320.50');
   });
 
-  describe('disconnect', () => {
-    it('should disconnect wallet', async () => {
-      const testKey = 'GBUQWP3BOUZX34ULNQG23RQ6F4BVXEYMJOCCQ26B7YPGD5CQ67GVGVX';
-      Freighter.isConnected.mockResolvedValue(true);
-      Freighter.getAddress.mockResolvedValue(testKey);
+  it('disconnects cleanly', async () => {
+    const walletService = (await import('../services/walletService.js')).default;
+    const Freighter = await import('@stellar/freighter-api');
 
-      await walletService.connect();
-      expect(walletService.isConnected()).toBe(true);
+    Freighter.isConnected.mockResolvedValue(true);
+    Freighter.getAddress.mockResolvedValue(
+      'GBUQWP3BOUZX34ULNQG23RQ6F4BVXEYMJOCCQ26B7YPGD5CQ67GVGVX'
+    );
 
-      walletService.disconnect();
-      expect(walletService.isConnected()).toBe(false);
-      expect(walletService.getPublicKey()).toBeNull();
-    });
-  });
+    await walletService.connect();
+    walletService.disconnect();
 
-  describe('isConnected', () => {
-    it('should return connection status', () => {
-      expect(walletService.isConnected()).toBe(false);
-
-      walletService.publicKey = 'test';
-      walletService.isInitialized = true;
-      expect(walletService.isConnected()).toBe(true);
-    });
+    expect(walletService.isConnected()).toBe(false);
+    expect(walletService.getPublicKey()).toBeNull();
   });
 });

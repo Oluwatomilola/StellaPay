@@ -1,167 +1,116 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent, waitFor, within } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import { WalletProvider } from '../../contexts/WalletContext.jsx';
-import { SetPaymentForm } from '../../components/SetPaymentForm.jsx';
-import { GetPaymentDisplay } from '../../components/GetPaymentDisplay.jsx';
-import walletService from '../../services/walletService.js';
-import contractService from '../../services/contractService.js';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { render, screen, waitFor } from '@testing-library/react';
+import App from '../App.jsx';
+import contractService from '../services/contractService.js';
 
-// Mock services
-vi.mock('../../services/walletService.js', () => ({
+vi.mock('../services/contractService.js', () => ({
   default: {
-    isConnected: vi.fn(() => true),
-    getPublicKey: vi.fn(() => 'GBUQWP3BOUZX34ULNQG23RQ6F4BVXEYMJOCCQ26B7YPGD5CQ67GVGVX'),
-    getNetworkPassphrase: vi.fn(() => 'Test SDF Network ; September 2015'),
-    getServer: vi.fn(() => ({})),
-    signTransaction: vi.fn(),
-  },
-}));
-
-vi.mock('../../services/contractService.js', () => ({
-  default: {
-    setLastPayment: vi.fn(),
+    canRead: vi.fn(() => true),
+    getConfig: vi.fn(),
+    getTokenMetadata: vi.fn(),
+    getPoolState: vi.fn(),
+    getRecentPayments: vi.fn(),
     getLastPayment: vi.fn(),
+    getProviderPosition: vi.fn(),
+    getRewardPoints: vi.fn(),
+    quotePayment: vi.fn(),
   },
 }));
 
-describe('Integration Tests - Payment Flow', () => {
+vi.mock('../services/monitoringService.js', () => ({
+  default: {
+    captureException: vi.fn((error) => ({ message: error?.message || 'error' })),
+  },
+}));
+
+vi.mock('../hooks/index.js', () => ({
+  useWallet: vi.fn(() => ({
+    publicKey: 'GBUQWP3BOUZX34ULNQG23RQ6F4BVXEYMJOCCQ26B7YPGD5CQ67GVGVXA',
+    balance: '42.00',
+    isConnected: true,
+    refreshBalance: vi.fn(),
+    connectWallet: vi.fn(),
+    disconnectWallet: vi.fn(),
+    clearError: vi.fn(),
+    error: null,
+    isLoading: false,
+  })),
+  useContractEvents: vi.fn(() => ({
+    events: [
+      {
+        id: 'evt-1',
+        label: 'TokenPaymentSettledEvent',
+        ledger: 42,
+        txHash: 'abc123hash',
+        txHashShort: 'abc123...3hash',
+        createdAt: '2026-04-22T20:00:00.000Z',
+        payload: { amount: '10000000' },
+      },
+    ],
+    error: null,
+    refresh: vi.fn(),
+  })),
+}));
+
+describe('App dashboard', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-  });
-
-  describe('SetPaymentForm Component', () => {
-    it('should display form fields when wallet is connected', () => {
-      render(<SetPaymentForm />);
-      
-      expect(screen.getByLabelText(/Recipient Address/i)).toBeInTheDocument();
-      expect(screen.getByLabelText(/Amount/i)).toBeInTheDocument();
-      expect(screen.getByLabelText(/Memo/i)).toBeInTheDocument();
+    contractService.getConfig.mockResolvedValue({
+      payment_fee_bps: 100,
+      reward_rate_bps: 500,
+      pool_token: 'CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
     });
-
-    it('should validate form before submission', async () => {
-      const user = userEvent.setup();
-      render(<SetPaymentForm />);
-
-      const submitButton = screen.getByRole('button', { name: /Submit Payment/i });
-      await user.click(submitButton);
-
-      // Should show validation errors
-      expect(screen.getByText(/Address is required/i)).toBeInTheDocument();
-      expect(screen.getByText(/Amount is required/i)).toBeInTheDocument();
+    contractService.getTokenMetadata.mockResolvedValue({
+      token: 'CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+      symbol: 'USDC',
+      decimals: 7,
     });
-
-    it('should validate Stellar address format', async () => {
-      const user = userEvent.setup();
-      render(<SetPaymentForm />);
-
-      const addressInput = screen.getByLabelText(/Recipient Address/i);
-      await user.type(addressInput, 'INVALID');
-      
-      const submitButton = screen.getByRole('button', { name: /Submit Payment/i });
-      await user.click(submitButton);
-
-      expect(screen.getByText(/Invalid Stellar address/i)).toBeInTheDocument();
+    contractService.getPoolState.mockResolvedValue({
+      total_liquidity: '100000000',
+      reward_reserve: '5000000',
+      collected_fees: '1000000',
+      payment_count: '9',
     });
-
-    it('should submit valid payment data', async () => {
-      const user = userEvent.setup();
-      const onSuccess = vi.fn();
-      
-      contractService.setLastPayment.mockResolvedValue({
-        hash: 'abc123def456',
-        status: 'pending',
-      });
-
-      render(<SetPaymentForm onSuccess={onSuccess} />);
-
-      const addressInput = screen.getByLabelText(/Recipient Address/i);
-      const amountInput = screen.getByLabelText(/Amount/i);
-      const memoInput = screen.getByLabelText(/Memo/i);
-      const submitButton = screen.getByRole('button', { name: /Submit Payment/i });
-
-      await user.type(addressInput, 'GBUQWP3BOUZX34ULNQG23RQ6F4BVXEYMJOCCQ26B7YPGD5CQ67GVGVX');
-      await user.type(amountInput, '100');
-      await user.type(memoInput, 'Test payment');
-      
-      await user.click(submitButton);
-
-      await waitFor(() => {
-        expect(contractService.setLastPayment).toHaveBeenCalledWith(
-          'GBUQWP3BOUZX34ULNQG23RQ6F4BVXEYMJOCCQ26B7YPGD5CQ67GVGVX',
-          100,
-          'Test payment'
-        );
-      });
+    contractService.getRecentPayments.mockResolvedValue([
+      {
+        id: '1',
+        to: 'GBUQWP3BOUZX34ULNQG23RQ6F4BVXEYMJOCCQ26B7YPGD5CQ67GVGVXA',
+        amount: '25000000',
+        fee_amount: '250000',
+        reward_points: '1250000',
+        memo: 'Invoice 1001',
+      },
+    ]);
+    contractService.getLastPayment.mockResolvedValue({
+      to: 'GBUQWP3BOUZX34ULNQG23RQ6F4BVXEYMJOCCQ26B7YPGD5CQ67GVGVXA',
+      amount: '10000000',
+      memo: 'Legacy snapshot',
+    });
+    contractService.getProviderPosition.mockResolvedValue({
+      shares: '100000000',
+      redeemable_amount: '101000000',
+    });
+    contractService.getRewardPoints.mockResolvedValue('1250000');
+    contractService.quotePayment.mockResolvedValue({
+      recipient_amount: '9900000',
+      fee_amount: '100000',
+      reward_points: '500000',
     });
   });
 
-  describe('GetPaymentDisplay Component', () => {
-    it('should display payment data when retrieved', async () => {
-      const user = userEvent.setup();
-      const mockPayment = {
-        to: 'GBUQWP3BOUZX34ULNQG23RQ6F4BVXEYMJOCCQ26B7YPGD5CQ67GVGVX',
-        amount: 100,
-        memo: 'Test payment',
-      };
+  it('renders the production dashboard and recent activity', async () => {
+    render(<App />);
 
-      contractService.getLastPayment.mockResolvedValue(mockPayment);
+    expect(
+      screen.getByText(/Inter-contract payments, liquidity accounting, and live Soroban telemetry/i)
+    ).toBeInTheDocument();
 
-      render(<GetPaymentDisplay />);
-
-      const button = screen.getByRole('button', { name: /Get Payment/i });
-      await user.click(button);
-
-      await waitFor(() => {
-        expect(screen.getByText(/GBUQWP3BOUZX34ULNQG23RQ6F4BVXEYMJOCCQ26B7YPGD5CQ67GVGVX/)).toBeInTheDocument();
-        expect(screen.getByText('100')).toBeInTheDocument();
-        expect(screen.getByText('Test payment')).toBeInTheDocument();
-      });
-    });
-
-    it('should handle errors gracefully', async () => {
-      const user = userEvent.setup();
-      const errorMessage = 'Failed to retrieve payment';
-
-      contractService.getLastPayment.mockRejectedValue(new Error(errorMessage));
-
-      render(<GetPaymentDisplay />);
-
-      const button = screen.getByRole('button', { name: /Get Payment/i });
-      await user.click(button);
-
-      await waitFor(() => {
-        expect(screen.getByText(errorMessage)).toBeInTheDocument();
-      });
-    });
-  });
-
-  describe('Form Validation', () => {
-    it('should validate amount is positive', async () => {
-      const user = userEvent.setup();
-      render(<SetPaymentForm />);
-
-      const amountInput = screen.getByLabelText(/Amount/i);
-      const submitButton = screen.getByRole('button', { name: /Submit Payment/i });
-
-      await user.type(amountInput, '-100');
-      await user.click(submitButton);
-
-      expect(screen.getByText(/Amount must be a positive number/i)).toBeInTheDocument();
-    });
-
-    it('should validate memo length', async () => {
-      const user = userEvent.setup();
-      render(<SetPaymentForm />);
-
-      const memoInput = screen.getByLabelText(/Memo/i);
-      const submitButton = screen.getByRole('button', { name: /Submit Payment/i });
-
-      // Type 29 characters (max is 28)
-      await user.type(memoInput, 'a'.repeat(29));
-      await user.click(submitButton);
-
-      expect(screen.getByText(/Memo must be 28 characters or less/i)).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText('Payment Rail')).toBeInTheDocument();
+      expect(screen.getByText('Liquidity Engine')).toBeInTheDocument();
+      expect(screen.getByText('Contract Telemetry')).toBeInTheDocument();
+      expect(screen.getByText('Invoice 1001')).toBeInTheDocument();
+      expect(screen.getByText('TokenPaymentSettledEvent')).toBeInTheDocument();
     });
   });
 });

@@ -1,25 +1,17 @@
 import React from 'react';
 
 export const Card = ({ children, className = '' }) => (
-  <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
-    {children}
-  </div>
+  <section className={['stella-card', className].filter(Boolean).join(' ')}>{children}</section>
 );
 
 export const CardHeader = ({ children, className = '' }) => (
-  <div className={`mb-4 ${className}`}>
-    {children}
-  </div>
+  <header className={['stella-card__header', className].filter(Boolean).join(' ')}>{children}</header>
 );
 
 export const CardBody = ({ children, className = '' }) => (
-  <div className={`${className}`}>
-    {children}
-  </div>
+  <div className={['stella-card__body', className].filter(Boolean).join(' ')}>{children}</div>
 );
 
 export const CardFooter = ({ children, className = '' }) => (
-  <div className={`mt-4 pt-4 border-t ${className}`}>
-    {children}
-  </div>
+  <footer className={['stella-card__footer', className].filter(Boolean).join(' ')}>{children}</footer>
 );
