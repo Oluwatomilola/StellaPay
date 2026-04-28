@@ -100,3 +100,45 @@ Verified locally with:
 - `cd contract && cargo +nightly test`
 - `cd vite-project && npm test -- --run`
 - `cd vite-project && npm run build`
+## Deployment checklist
+
+1. Build the contract (`soroban contract build`).
+2. Deploy the WASM to Testnet (`soroban contract deploy …`).
+3. Update `vite-project/.env.local` with the contract ID.
+4. Run `npm run dev` and connect via Freighter to invoke `set_last_payment` or view the stored payment.
+5. Confirm the deployment by fetching the contract metadata or invoking a read-only method:
+   - `soroban contract info --id <CONTRACT_ID> --network testnet`
+   - `soroban contract call --id <CONTRACT_ID> --fn last_payment --network testnet`
+   Alternatively, open the Vite frontend and hit “Refresh contract state” once the wallet is connected; if the UI reads `last_payment`, the contract is responding.
+
+## Testing & verification
+
+- Soroban contract: `cd contract && cargo +nightly test`.
+- Frontend: `cd vite-project && npm run build`.
+
+## Notes
+
+- The frontend talks directly to Horizon/Soroban RPC and the Freighter extension; there is no intermediate server.
+- All sensitive payloads (transaction XDRs) are signed by Freighter before being submitted to the Soroban RPC.
+- Keep your Testnet account funded via Friendbot before sending transactions.
+
+
+--network testnet
+ℹ️  Simulating install transaction…
+ℹ️  Signing transaction: 1ef983a7cd8d082a479f9cf2a3a39907f8002829d93811ee47578a612868e418
+🌎 Submitting install transaction…
+ℹ️  Using wasm hash c6c47f013f1d38d9d30e2a333e05916512d51ddb66bda693bc54c64757b781ad
+ℹ️  Simulating deploy transaction…
+ℹ️  Transaction hash is 9d59c41e83501989630da96d24621f174ccf752fcdfa94a0fdd8821606368a8b
+🔗 https://stellar.expert/explorer/testnet/tx/9d59c41e83501989630da96d24621f174ccf752fcdfa94a0fdd8821606368a8b
+ℹ️  Signing transaction: 9d59c41e83501989630da96d24621f174ccf752fcdfa94a0fdd8821606368a8b
+🌎 Submitting deploy transaction…
+🔗 https://stellar.expert/explorer/testnet/contract/CA2CPSF57SRXTKGSS2ZBR2FQ2X64O5VMJF6JRFT4PAAN5EDPVYLPX4XN
+✅ Deployed!
+Contract Address:
+CA2CPSF57SRXTKGSS2ZBR2FQ2X64O5VMJF6JRFT4PAAN5EDPVYLPX4XN
+
+## FrontEnd UI Screenshot
+<img width="1440" height="765" alt="Screenshot 2026-03-04 at 17 11 38" src="https://github.com/user-attachments/assets/7c933207-0c40-4ad5-9677-09b943aa3b40" />
+
+
